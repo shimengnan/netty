@@ -28,7 +28,7 @@ public class DefaultFullHttpRequest extends DefaultHttpRequest implements FullHt
     private final HttpHeaders trailingHeader;
 
     /**
-     * Used to cache the value of the hash code and avoid {@link IllegalReferenceCountException}.
+     * Used to cache the value of the hash codec and avoid {@link IllegalReferenceCountException}.
      */
     private int hash;
 

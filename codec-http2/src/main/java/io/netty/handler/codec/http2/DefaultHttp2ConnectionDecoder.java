@@ -369,7 +369,7 @@ public class DefaultHttp2ConnectionDecoder implements Http2ConnectionDecoder {
             final Http2FrameSizePolicy frameSizePolicy = config.frameSizePolicy();
             if (pushEnabled != null) {
                 if (connection.isServer()) {
-                    throw connectionError(PROTOCOL_ERROR, "Server sending SETTINGS frame with ENABLE_PUSH specified");
+                    throw connectionError(PROTOCOL_ERROR, "server sending SETTINGS frame with ENABLE_PUSH specified");
                 }
                 connection.local().allowPushTo(pushEnabled);
             }

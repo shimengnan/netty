@@ -114,7 +114,7 @@ public interface Http2FrameWriter extends Http2DataWriter, Closeable {
      *
      * @param ctx the context to use for writing.
      * @param streamId the stream for which to send the frame.
-     * @param errorCode the error code indicating the nature of the failure.
+     * @param errorCode the error codec indicating the nature of the failure.
      * @param promise the promise for the write.
      * @return the future for the write.
      */
@@ -181,7 +181,7 @@ public interface Http2FrameWriter extends Http2DataWriter, Closeable {
      *
      * @param ctx the context to use for writing.
      * @param lastStreamId the last known stream of this endpoint.
-     * @param errorCode the error code, if the connection was abnormally terminated.
+     * @param errorCode the error codec, if the connection was abnormally terminated.
      * @param debugData application-defined debug data. This will be released by this method.
      * @param promise the promise for the write.
      * @return the future for the write.

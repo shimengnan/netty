@@ -220,16 +220,16 @@ public class UDTClientServerConnectionTest {
                         });
                 channel = boot.bind(port).sync().channel();
                 isRunning = true;
-                log.info("Server ready.");
+                log.info("server ready.");
                 waitForRunning(false);
-                log.info("Server closing acceptor...");
+                log.info("server closing acceptor...");
                 channel.close().sync();
-                log.info("Server closing connectors...");
+                log.info("server closing connectors...");
                 group.close().sync();
                 isShutdown = true;
-                log.info("Server is done.");
+                log.info("server is done.");
             } catch (final Throwable e) {
-                log.error("Server failure.", e);
+                log.error("server failure.", e);
             } finally {
                 acceptGroup.shutdownGracefully();
                 connectGroup.shutdownGracefully();
@@ -299,7 +299,7 @@ public class UDTClientServerConnectionTest {
                 throws Exception {
             group.add(ctx.channel());
             isActive = true;
-            log.info("Server active  : {}", ctx.channel());
+            log.info("server active  : {}", ctx.channel());
             super.channelActive(ctx);
         }
 
@@ -308,20 +308,20 @@ public class UDTClientServerConnectionTest {
                 throws Exception {
             group.remove(ctx.channel());
             isActive = false;
-            log.info("Server inactive: {}", ctx.channel());
+            log.info("server inactive: {}", ctx.channel());
             super.channelInactive(ctx);
         }
 
         @Override
         public void exceptionCaught(final ChannelHandlerContext ctx,
                 final Throwable cause) {
-            log.warn("Server close on exception.", cause);
+            log.warn("server close on exception.", cause);
             ctx.close();
         }
 
         @Override
         public void channelRead0(ChannelHandlerContext ctx, Object msg) throws Exception {
-            log.info("Server received: " + msg);
+            log.info("server received: " + msg);
         }
     }
     static final Logger log = LoggerFactory

@@ -64,7 +64,7 @@ public final class AsciiString implements CharSequence, Comparable<CharSequence>
      */
     private final int length;
     /**
-     * The hash code is cached after it is first computed. It can be reset with {@link #arrayChanged()}.
+     * The hash codec is cached after it is first computed. It can be reset with {@link #arrayChanged()}.
      */
     private int hash;
     /**
@@ -1117,7 +1117,7 @@ public final class AsciiString implements CharSequence, Comparable<CharSequence>
     /**
      * {@inheritDoc}
      * <p>
-     * Provides a case-insensitive hash code for Ascii like byte strings.
+     * Provides a case-insensitive hash codec for Ascii like byte strings.
      */
     @Override
     public int hashCode() {
@@ -1385,7 +1385,7 @@ public final class AsciiString implements CharSequence, Comparable<CharSequence>
     }
 
     /**
-     * Returns the case-insensitive hash code of the specified string. Note that this method uses the same hashing
+     * Returns the case-insensitive hash codec of the specified string. Note that this method uses the same hashing
      * algorithm with {@link #hashCode()} so that you can put both {@link AsciiString}s and arbitrary
      * {@link CharSequence}s into the same headers.
      */

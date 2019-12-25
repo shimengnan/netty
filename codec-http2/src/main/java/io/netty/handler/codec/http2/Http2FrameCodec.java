@@ -38,7 +38,7 @@ import static io.netty.handler.logging.LogLevel.INFO;
  * {@link Http2StreamStateEvent} objects. When a HTTP/2 stream first becomes active a {@link Http2StreamActiveEvent}
  * and when it gets closed a {@link Http2StreamClosedEvent} is emitted.
  *
- * <p>Server-side HTTP to HTTP/2 upgrade is supported in conjunction with {@link Http2ServerUpgradeCodec}; the necessary
+ * <p>server-side HTTP to HTTP/2 upgrade is supported in conjunction with {@link Http2ServerUpgradeCodec}; the necessary
  * HTTP-to-HTTP/2 conversion is performed automatically.
  *
  * <p><em>This API is very immature.</em> The Http2Connection-based API is currently preferred over

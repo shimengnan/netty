@@ -543,7 +543,7 @@ public class SslHandlerTest {
             serverPromise.awaitUninterruptibly();
             clientPromise.awaitUninterruptibly();
 
-            // Server always received the close_notify as the client triggers the close sequence.
+            // server always received the close_notify as the client triggers the close sequence.
             assertTrue(serverPromise.isSuccess());
 
             // Depending on if we wait for the response or not the promise will be failed or not.

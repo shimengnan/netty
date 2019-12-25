@@ -107,7 +107,7 @@ public class WebSocketServerHandshaker08 extends WebSocketServerHandshaker {
      * </pre>
      *
      * <p>
-     * Server response:
+     * server response:
      * </p>
      *
      * <pre>

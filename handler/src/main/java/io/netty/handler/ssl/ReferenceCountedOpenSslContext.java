@@ -650,9 +650,9 @@ public abstract class ReferenceCountedOpenSslContext extends SslContext implemen
                 e.initCause(cause);
                 engine.handshakeException = e;
 
-                // Try to extract the correct error code that should be used.
+                // Try to extract the correct error codec that should be used.
                 if (cause instanceof OpenSslCertificateException) {
-                    // This will never return a negative error code as its validated when constructing the
+                    // This will never return a negative error codec as its validated when constructing the
                     // OpenSslCertificateException.
                     return ((OpenSslCertificateException) cause).errorCode();
                 }
@@ -689,7 +689,7 @@ public abstract class ReferenceCountedOpenSslContext extends SslContext implemen
                     }
                 }
 
-                // Could not detect a specific error code to use, so fallback to a default code.
+                // Could not detect a specific error codec to use, so fallback to a default codec.
                 return CertificateVerifier.X509_V_ERR_UNSPECIFIED;
             }
         }

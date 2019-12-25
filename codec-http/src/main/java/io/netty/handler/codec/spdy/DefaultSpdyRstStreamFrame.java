@@ -29,7 +29,7 @@ public class DefaultSpdyRstStreamFrame extends DefaultSpdyStreamFrame
      * Creates a new instance.
      *
      * @param streamId   the Stream-ID of this frame
-     * @param statusCode the Status code of this frame
+     * @param statusCode the Status codec of this frame
      */
     public DefaultSpdyRstStreamFrame(int streamId, int statusCode) {
         this(streamId, SpdyStreamStatus.valueOf(statusCode));

@@ -230,7 +230,7 @@ public class DefaultHttp2ConnectionEncoder implements Http2ConnectionEncoder {
         try {
             Boolean pushEnabled = settings.pushEnabled();
             if (pushEnabled != null && connection.isServer()) {
-                throw connectionError(PROTOCOL_ERROR, "Server sending SETTINGS frame with ENABLE_PUSH specified");
+                throw connectionError(PROTOCOL_ERROR, "server sending SETTINGS frame with ENABLE_PUSH specified");
             }
         } catch (Throwable e) {
             return promise.setFailure(e);

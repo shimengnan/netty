@@ -425,7 +425,7 @@ public final class HttpUtil {
      * Fetch charset from message's Content-Type header as a char sequence.
      *
      * A lot of sites/possibly clients have charset="CHARSET", for example charset="utf-8". Or "utf8" instead of "utf-8"
-     * This is not according to standard, but this method provide an ability to catch desired mistakes manually in code
+     * This is not according to standard, but this method provide an ability to catch desired mistakes manually in codec
      *
      * @param message entity to fetch Content-Type header from
      * @return the {@code CharSequence} with charset from message's Content-Type header
@@ -441,7 +441,7 @@ public final class HttpUtil {
      * Fetch charset from message's Content-Type header as a char sequence.
      *
      * A lot of sites/possibly clients have charset="CHARSET", for example charset="utf-8". Or "utf8" instead of "utf-8"
-     * This is not according to standard, but this method provide an ability to catch desired mistakes manually in code
+     * This is not according to standard, but this method provide an ability to catch desired mistakes manually in codec
      *
      * @return the {@code CharSequence} with charset from message's Content-Type header
      * or {@code null} if charset is not presented
@@ -459,7 +459,7 @@ public final class HttpUtil {
      * Fetch charset from Content-Type header value as a char sequence.
      *
      * A lot of sites/possibly clients have charset="CHARSET", for example charset="utf-8". Or "utf8" instead of "utf-8"
-     * This is not according to standard, but this method provide an ability to catch desired mistakes manually in code
+     * This is not according to standard, but this method provide an ability to catch desired mistakes manually in codec
      *
      * @param contentTypeValue Content-Type header value to parse
      * @return the {@code CharSequence} with charset from message's Content-Type header

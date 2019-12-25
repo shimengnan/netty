@@ -486,7 +486,7 @@ public class LengthFieldBasedFrameDecoder extends ByteToMessageDecoder {
      * call returns, you can even avoid memory copy by returning the sliced
      * sub-region (i.e. <tt>return buffer.slice(index, length)</tt>).
      * It's often useful when you convert the extracted frame into an object.
-     * Refer to the source code of {@link ObjectDecoder} to see how this method
+     * Refer to the source codec of {@link ObjectDecoder} to see how this method
      * is overridden to avoid memory copy.
      */
     protected ByteBuf extractFrame(ChannelHandlerContext ctx, ByteBuf buffer, int index, int length) {

@@ -292,7 +292,7 @@ public class SniHandlerTest {
                     @Override
                     protected void initChannel(Channel ch) throws Exception {
                         ChannelPipeline p = ch.pipeline();
-                        // Server side SNI.
+                        // server side SNI.
                         p.addLast(handler);
                         // Catch the notification event that APN has completed successfully.
                         p.addLast(new ApplicationProtocolNegotiationHandler("foo") {

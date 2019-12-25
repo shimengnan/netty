@@ -87,7 +87,7 @@ public interface RxtxChannelConfig extends ChannelConfig {
 
     enum Databits {
         /**
-         * 5 data bits will be used for each character (ie. Baudot code)
+         * 5 data bits will be used for each character (ie. Baudot codec)
          */
         DATABITS_5(SerialPort.DATABITS_5),
         /**

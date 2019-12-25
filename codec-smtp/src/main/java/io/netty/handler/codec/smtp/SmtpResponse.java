@@ -26,7 +26,7 @@ import java.util.List;
 public interface SmtpResponse {
 
     /**
-     * Returns the response code.
+     * Returns the response codec.
      */
     int code();
 

@@ -30,7 +30,7 @@ public class DefaultFullHttpResponse extends DefaultHttpResponse implements Full
     private final HttpHeaders trailingHeaders;
 
     /**
-     * Used to cache the value of the hash code and avoid {@link IllegalReferenceCountException}.
+     * Used to cache the value of the hash codec and avoid {@link IllegalReferenceCountException}.
      */
     private int hash;
 

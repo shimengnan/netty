@@ -56,12 +56,12 @@ final class Bzip2HuffmanStageEncoder {
     private final int[] mtfSymbolFrequencies;
 
     /**
-     * The Canonical Huffman code lengths for each table.
+     * The Canonical Huffman codec lengths for each table.
      */
     private final int[][] huffmanCodeLengths;
 
     /**
-     * Merged code symbols for each table. The value at each position is ((code length << 24) | code).
+     * Merged codec symbols for each table. The value at each position is ((codec length << 24) | codec).
      */
     private final int[][] huffmanMergedCodeSymbols;
 
@@ -114,10 +114,10 @@ final class Bzip2HuffmanStageEncoder {
     }
 
     /**
-     * Generate a Huffman code length table for a given list of symbol frequencies.
+     * Generate a Huffman codec length table for a given list of symbol frequencies.
      * @param alphabetSize The total number of symbols
      * @param symbolFrequencies The frequencies of the symbols
-     * @param codeLengths The array to which the generated code lengths should be written
+     * @param codeLengths The array to which the generated codec lengths should be written
      */
     private static void generateHuffmanCodeLengths(final int alphabetSize,
                                                    final int[] symbolFrequencies, final int[] codeLengths) {
@@ -126,7 +126,7 @@ final class Bzip2HuffmanStageEncoder {
         final int[] sortedFrequencies = new int[alphabetSize];
 
         // The Huffman allocator needs its input symbol frequencies to be sorted, but we need to
-        // return code lengths in the same order as the corresponding frequencies are passed in.
+        // return codec lengths in the same order as the corresponding frequencies are passed in.
 
         // The symbol frequency and index are merged into a single array of
         // integers - frequency in the high 23 bits, index in the low 9 bits.
@@ -142,20 +142,20 @@ final class Bzip2HuffmanStageEncoder {
             sortedFrequencies[i] = mergedFrequenciesAndIndices[i] >>> 9;
         }
 
-        // Allocate code lengths - the allocation is in place,
-        // so the code lengths will be in the sortedFrequencies array afterwards
+        // Allocate codec lengths - the allocation is in place,
+        // so the codec lengths will be in the sortedFrequencies array afterwards
         Bzip2HuffmanAllocator.allocateHuffmanCodeLengths(sortedFrequencies, HUFFMAN_ENCODE_MAX_CODE_LENGTH);
 
-        // Reverse the sort to place the code lengths in the same order as the symbols whose frequencies were passed in
+        // Reverse the sort to place the codec lengths in the same order as the symbols whose frequencies were passed in
         for (int i = 0; i < alphabetSize; i++) {
             codeLengths[mergedFrequenciesAndIndices[i] & 0x1ff] = sortedFrequencies[i];
         }
     }
 
     /**
-     * Generate initial Huffman code length tables, giving each table a different low cost section
+     * Generate initial Huffman codec length tables, giving each table a different low cost section
      * of the alphabet that is roughly equal in overall cumulative frequency. Note that the initial
-     * tables are invalid for actual Huffman code generation, and only serve as the seed for later
+     * tables are invalid for actual Huffman codec generation, and only serve as the seed for later
      * iterative optimisation in {@link #optimiseSelectorsAndHuffmanTables(boolean)}.
      */
     private void generateHuffmanOptimisationSeeds() {
@@ -194,8 +194,8 @@ final class Bzip2HuffmanStageEncoder {
     }
 
     /**
-     * Co-optimise the selector list and the alternative Huffman table code lengths. This method is
-     * called repeatedly in the hope that the total encoded size of the selectors, the Huffman code
+     * Co-optimise the selector list and the alternative Huffman table codec lengths. This method is
+     * called repeatedly in the hope that the total encoded size of the selectors, the Huffman codec
      * lengths and the block data encoded with them will converge towards a minimum.<br>
      * If the data is highly incompressible, it is possible that the total encoded size will
      * instead diverge (increase) slightly.<br>
@@ -213,7 +213,7 @@ final class Bzip2HuffmanStageEncoder {
 
         int selectorIndex = 0;
 
-        // Find the best table for each group of 50 block bytes based on the current Huffman code lengths
+        // Find the best table for each group of 50 block bytes based on the current Huffman codec lengths
         for (int groupStart = 0; groupStart < mtfLength;) {
 
             final int groupEnd = Math.min(groupStart + HUFFMAN_GROUP_RUN_LENGTH, mtfLength) - 1;
@@ -251,7 +251,7 @@ final class Bzip2HuffmanStageEncoder {
             groupStart = groupEnd + 1;
         }
 
-        // Generate new Huffman code lengths based on the frequencies for each table accumulated in this iteration
+        // Generate new Huffman codec lengths based on the frequencies for each table accumulated in this iteration
         for (int i = 0; i < totalTables; i++) {
             generateHuffmanCodeLengths(mtfAlphabetSize, tableFrequencies[i], huffmanCodeLengths[i]);
         }

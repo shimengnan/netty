@@ -64,14 +64,14 @@ public interface DnsResponse extends DnsMessage {
     DnsResponse setRecursionAvailable(boolean recursionAvailable);
 
     /**
-     * Returns the 4 bit return code.
+     * Returns the 4 bit return codec.
      */
     DnsResponseCode code();
 
     /**
-     * Sets the response code for this message.
+     * Sets the response codec for this message.
      *
-     * @param code the response code
+     * @param code the response codec
      */
     DnsResponse setCode(DnsResponseCode code);
 

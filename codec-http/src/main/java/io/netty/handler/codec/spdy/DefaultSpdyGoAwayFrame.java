@@ -38,7 +38,7 @@ public class DefaultSpdyGoAwayFrame implements SpdyGoAwayFrame {
      * Creates a new instance.
      *
      * @param lastGoodStreamId the Last-good-stream-ID of this frame
-     * @param statusCode       the Status code of this frame
+     * @param statusCode       the Status codec of this frame
      */
     public DefaultSpdyGoAwayFrame(int lastGoodStreamId, int statusCode) {
         this(lastGoodStreamId, SpdySessionStatus.valueOf(statusCode));

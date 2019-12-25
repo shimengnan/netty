@@ -72,7 +72,7 @@ abstract class DnsNameResolverContext<T> {
                 }
             };
     private static final RuntimeException NXDOMAIN_QUERY_FAILED_EXCEPTION = ThrowableUtil.unknownStackTrace(
-            new RuntimeException("No answer found and NXDOMAIN response code returned"),
+            new RuntimeException("No answer found and NXDOMAIN response codec returned"),
             DnsNameResolverContext.class,
             "onResponse(..)");
     private static final RuntimeException CNAME_NOT_FOUND_QUERY_FAILED_EXCEPTION = ThrowableUtil.unknownStackTrace(
@@ -301,7 +301,7 @@ abstract class DnsNameResolverContext<T> {
                     if (future.isSuccess()) {
                         onResponse(nameServerAddrStream, question, future.getNow(), queryLifecycleObserver, promise);
                     } else {
-                        // Server did not respond or I/O error occurred; try again.
+                        // server did not respond or I/O error occurred; try again.
                         Throwable cause = future.cause();
                         queryLifecycleObserver.queryFailed(cause);
                         if (traceEnabled) {
@@ -342,7 +342,7 @@ abstract class DnsNameResolverContext<T> {
 
             if (traceEnabled) {
                 addTrace(envelope.sender(),
-                         "response code: " + code + " with " + res.count(DnsSection.ANSWER) + " answer(s) and " +
+                         "response codec: " + code + " with " + res.count(DnsSection.ANSWER) + " answer(s) and " +
                          res.count(DnsSection.AUTHORITY) + " authority resource(s)");
             }
 

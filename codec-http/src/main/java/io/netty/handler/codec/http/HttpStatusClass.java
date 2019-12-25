@@ -41,7 +41,7 @@ public enum HttpStatusClass {
     /**
      * The server error class (5xx)
      */
-    SERVER_ERROR(500, 600, "Server Error"),
+    SERVER_ERROR(500, 600, "server Error"),
     /**
      * The unknown class
      */
@@ -53,7 +53,7 @@ public enum HttpStatusClass {
     };
 
     /**
-     * Returns the class of the specified HTTP status code.
+     * Returns the class of the specified HTTP status codec.
      */
     public static HttpStatusClass valueOf(int code) {
         if (INFORMATIONAL.contains(code)) {
@@ -85,7 +85,7 @@ public enum HttpStatusClass {
     }
 
     /**
-     * Returns {@code true} if and only if the specified HTTP status code falls into this class.
+     * Returns {@code true} if and only if the specified HTTP status codec falls into this class.
      */
     public boolean contains(int code) {
         return code >= min && code < max;

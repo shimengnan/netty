@@ -355,7 +355,7 @@ public abstract class ByteBuf implements ReferenceCounted, Comparable<ByteBuf> {
      * Sets the {@code readerIndex} and {@code writerIndex} of this buffer
      * in one shot.  This method is useful when you have to worry about the
      * invocation order of {@link #readerIndex(int)} and {@link #writerIndex(int)}
-     * methods.  For example, the following code will fail:
+     * methods.  For example, the following codec will fail:
      *
      * <pre>
      * // Create a buffer whose readerIndex, writerIndex and capacity are
@@ -368,7 +368,7 @@ public abstract class ByteBuf implements ReferenceCounted, Comparable<ByteBuf> {
      * buf.writerIndex(4);
      * </pre>
      *
-     * The following code will also fail:
+     * The following codec will also fail:
      *
      * <pre>
      * // Create a buffer whose readerIndex, writerIndex and capacity are
@@ -528,7 +528,7 @@ public abstract class ByteBuf implements ReferenceCounted, Comparable<ByteBuf> {
     /**
      * Tries to make sure the number of {@linkplain #writableBytes() the writable bytes}
      * is equal to or greater than the specified value.  Unlike {@link #ensureWritable(int)},
-     * this method does not raise an exception but returns a code.
+     * this method does not raise an exception but returns a codec.
      *
      * @param minWritableBytes
      *        the expected minimum number of writable bytes
@@ -547,7 +547,7 @@ public abstract class ByteBuf implements ReferenceCounted, Comparable<ByteBuf> {
     public abstract int ensureWritable(int minWritableBytes, boolean force);
 
     /**
-     * Gets a boolean at the specified absolute (@code index) in this buffer.
+     * Gets a boolean at the specified absolute (@codec index) in this buffer.
      * This method does not modify the {@code readerIndex} or {@code writerIndex}
      * of this buffer.
      *
@@ -2309,7 +2309,7 @@ public abstract class ByteBuf implements ReferenceCounted, Comparable<ByteBuf> {
     public abstract String toString(int index, int length, Charset charset);
 
     /**
-     * Returns a hash code which was calculated from the content of this
+     * Returns a hash codec which was calculated from the content of this
      * buffer.  If there's a byte array which is
      * {@linkplain #equals(Object) equal to} this array, both arrays should
      * return the same value.

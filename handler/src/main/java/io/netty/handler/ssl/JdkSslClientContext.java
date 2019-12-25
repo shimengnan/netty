@@ -32,7 +32,7 @@ import java.security.cert.X509Certificate;
  * A client-side {@link SslContext} which uses JDK's SSL/TLS implementation.
  *
  * @deprecated Use {@link SslContextBuilder} to create {@link JdkSslContext} instances and only
- * use {@link JdkSslContext} in your code.
+ * use {@link JdkSslContext} in your codec.
  */
 @Deprecated
 public final class JdkSslClientContext extends JdkSslContext {

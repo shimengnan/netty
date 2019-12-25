@@ -22,7 +22,7 @@
 // without modification, are permitted provided that the
 // following conditions are met:
 //
-// * Redistributions of source code must retain the above
+// * Redistributions of source codec must retain the above
 // copyright notice, this list of conditions and the
 // following disclaimer.
 //
@@ -66,7 +66,7 @@ import java.util.List;
 
 /**
  * <p>
- * Encodes a web socket frame into wire protocol version 8 format. This code was forked from <a
+ * Encodes a web socket frame into wire protocol version 8 format. This codec was forked from <a
  * href="https://github.com/joewalnes/webbit">webbit</a> and modified.
  * </p>
  */
@@ -95,7 +95,7 @@ public class WebSocket08FrameEncoder extends MessageToMessageEncoder<WebSocketFr
      * Constructor
      *
      * @param maskPayload
-     *            Web socket clients must set this to true to mask payload. Server implementations must set this to
+     *            Web socket clients must set this to true to mask payload. server implementations must set this to
      *            false.
      */
     public WebSocket08FrameEncoder(boolean maskPayload) {

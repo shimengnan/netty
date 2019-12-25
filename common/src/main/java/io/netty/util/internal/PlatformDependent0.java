@@ -685,8 +685,8 @@ final class PlatformDependent0 {
     }
 
     static int hashCodeAsciiCompute(long value, int hash) {
-        // masking with 0x1f reduces the number of overall bits that impact the hash code but makes the hash
-        // code the same regardless of character case (upper case or lower case hash is the same).
+        // masking with 0x1f reduces the number of overall bits that impact the hash codec but makes the hash
+        // codec the same regardless of character case (upper case or lower case hash is the same).
         return hash * HASH_CODE_C1 +
                 // Low order int
                 hashCodeAsciiSanitize((int) value) * HASH_CODE_C2 +

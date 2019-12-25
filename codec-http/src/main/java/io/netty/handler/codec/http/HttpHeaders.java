@@ -287,9 +287,9 @@ public abstract class HttpHeaders implements Iterable<Map.Entry<String, String>>
          */
         public static final String SEC_WEBSOCKET_ACCEPT = "Sec-WebSocket-Accept";
         /**
-         * {@code "Server"}
+         * {@code "server"}
          */
-        public static final String SERVER = "Server";
+        public static final String SERVER = "server";
         /**
          * {@code "Set-Cookie"}
          */
@@ -626,7 +626,7 @@ public abstract class HttpHeaders implements Iterable<Map.Entry<String, String>>
      *
      * Sets a new header with the specified name and values.  If there is an
      * existing header with the same name, the existing header is removed.
-     * This getMethod can be represented approximately as the following code:
+     * This getMethod can be represented approximately as the following codec:
      * <pre>
      * removeHeader(message, name);
      * for (Object v: values) {
@@ -1372,7 +1372,7 @@ public abstract class HttpHeaders implements Iterable<Map.Entry<String, String>>
     /**
      * Adds a new header with the specified name and values.
      *
-     * This getMethod can be represented approximately as the following code:
+     * This getMethod can be represented approximately as the following codec:
      * <pre>
      * for (Object v: values) {
      *     if (v == null) {
@@ -1452,7 +1452,7 @@ public abstract class HttpHeaders implements Iterable<Map.Entry<String, String>>
      * Sets a header with the specified name and values.
      *
      * If there is an existing header with the same name, it is removed.
-     * This getMethod can be represented approximately as the following code:
+     * This getMethod can be represented approximately as the following codec:
      * <pre>
      * headers.remove(name);
      * for (Object v: values) {

@@ -33,10 +33,10 @@ import java.util.List;
  * An encoder that encodes the content in {@link AddressedEnvelope} to {@link DatagramPacket} using
  * the specified message encoder. E.g.,
  *
- * <pre><code>
+ * <pre><codec>
  * {@link ChannelPipeline} pipeline = ...;
  * pipeline.addLast("udpEncoder", new {@link DatagramPacketEncoder}(new {@link ProtobufEncoder}(...));
- * </code></pre>
+ * </codec></pre>
  *
  * Note: As UDP packets are out-of-order, you should make sure the encoded message size are not greater than
  * the max safe packet size in your particular network path which guarantees no packet fragmentation.

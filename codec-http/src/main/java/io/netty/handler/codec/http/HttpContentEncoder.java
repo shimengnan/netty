@@ -41,7 +41,7 @@ import java.util.Queue;
  * <p>
  * Please note that this is an abstract class.  You have to extend this class
  * and implement {@link #beginEncode(HttpResponse, String)} properly to make
- * this class functional.  For example, refer to the source code of
+ * this class functional.  For example, refer to the source codec of
  * {@link HttpContentCompressor}.
  * <p>
  * This handler must be placed after {@link HttpObjectEncoder} in the pipeline

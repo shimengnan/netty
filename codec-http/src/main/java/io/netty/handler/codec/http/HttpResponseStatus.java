@@ -22,7 +22,7 @@ import io.netty.util.ByteProcessor;
 import io.netty.util.CharsetUtil;
 
 /**
- * The response code and its description of HTTP or its derived protocols, such as
+ * The response codec and its description of HTTP or its derived protocols, such as
  * <a href="http://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol">RTSP</a> and
  * <a href="http://en.wikipedia.org/wiki/Internet_Content_Adaptation_Protocol">ICAP</a>.
  */
@@ -266,9 +266,9 @@ public class HttpResponseStatus implements Comparable<HttpResponseStatus> {
             newStatus(431, "Request Header Fields Too Large");
 
     /**
-     * 500 Internal Server Error
+     * 500 Internal server Error
      */
-    public static final HttpResponseStatus INTERNAL_SERVER_ERROR = newStatus(500, "Internal Server Error");
+    public static final HttpResponseStatus INTERNAL_SERVER_ERROR = newStatus(500, "Internal server Error");
 
     /**
      * 501 Not Implemented
@@ -322,8 +322,8 @@ public class HttpResponseStatus implements Comparable<HttpResponseStatus> {
     }
 
     /**
-     * Returns the {@link HttpResponseStatus} represented by the specified code.
-     * If the specified code is a standard HTTP getStatus code, a cached instance
+     * Returns the {@link HttpResponseStatus} represented by the specified codec.
+     * If the specified codec is a standard HTTP getStatus codec, a cached instance
      * will be returned.  Otherwise, a new instance will be returned.
      */
     public static HttpResponseStatus valueOf(int code) {
@@ -562,14 +562,14 @@ public class HttpResponseStatus implements Comparable<HttpResponseStatus> {
     private final byte[] bytes;
 
     /**
-     * Creates a new instance with the specified {@code code} and the auto-generated default reason phrase.
+     * Creates a new instance with the specified {@code codec} and the auto-generated default reason phrase.
      */
     private HttpResponseStatus(int code) {
         this(code, HttpStatusClass.valueOf(code).defaultReasonPhrase() + " (" + code + ')', false);
     }
 
     /**
-     * Creates a new instance with the specified {@code code} and its {@code reasonPhrase}.
+     * Creates a new instance with the specified {@code codec} and its {@code reasonPhrase}.
      */
     public HttpResponseStatus(int code, String reasonPhrase) {
         this(code, reasonPhrase, false);
@@ -578,7 +578,7 @@ public class HttpResponseStatus implements Comparable<HttpResponseStatus> {
     private HttpResponseStatus(int code, String reasonPhrase, boolean bytes) {
         if (code < 0) {
             throw new IllegalArgumentException(
-                    "code: " + code + " (expected: 0+)");
+                    "codec: " + code + " (expected: 0+)");
         }
 
         if (reasonPhrase == null) {
@@ -607,14 +607,14 @@ public class HttpResponseStatus implements Comparable<HttpResponseStatus> {
     }
 
     /**
-     * Returns the code of this {@link HttpResponseStatus}.
+     * Returns the codec of this {@link HttpResponseStatus}.
      */
     public int code() {
         return code;
     }
 
     /**
-     * Returns the status code as {@link AsciiString}.
+     * Returns the status codec as {@link AsciiString}.
      */
     public AsciiString codeAsText() {
         return codeAsText;

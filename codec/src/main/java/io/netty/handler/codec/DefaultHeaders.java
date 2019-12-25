@@ -42,7 +42,7 @@ import static java.lang.Math.max;
  */
 public class DefaultHeaders<K, V, T extends Headers<K, V, T>> implements Headers<K, V, T> {
     /**
-     * Constant used to seed the hash code generation. Could be anything but this was borrowed from murmur3.
+     * Constant used to seed the hash codec generation. Could be anything but this was borrowed from murmur3.
      */
     static final int HASH_CODE_SEED = 0xc2b2ae35;
 
@@ -862,7 +862,7 @@ public class DefaultHeaders<K, V, T extends Headers<K, V, T>> implements Headers
     }
 
     /**
-     * Generate a hash code for this object given a {@link HashingStrategy} to generate hash codes for
+     * Generate a hash codec for this object given a {@link HashingStrategy} to generate hash codes for
      * individual values.
      * @param valueHashingStrategy Defines how values will be hashed.
      */
@@ -912,7 +912,7 @@ public class DefaultHeaders<K, V, T extends Headers<K, V, T>> implements Headers
     }
 
     /**
-     * @return the first value inserted whose hash code equals {@code h} and whose name is equal to {@code name}.
+     * @return the first value inserted whose hash codec equals {@code h} and whose name is equal to {@code name}.
      */
     private V remove0(int h, int i, K name) {
         HeaderEntry<K, V> e = entries[i];

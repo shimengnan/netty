@@ -74,7 +74,7 @@ public interface Attribute<T> {
     boolean compareAndSet(T oldValue, T newValue);
 
     /**
-     * Removes this attribute from the {@link AttributeMap}. Subsequent {@link #get()} calls will return @{code null}.
+     * Removes this attribute from the {@link AttributeMap}. Subsequent {@link #get()} calls will return @{codec null}.
      *
      * If you only want to remove the value and clear the {@link Attribute} while still keep it in
      * {@link AttributeMap} use {@link #set(Object)} with a value of {@code null}.

@@ -102,7 +102,7 @@ public class DefaultDnsResponse extends AbstractDnsMessage implements DnsRespons
 
     @Override
     public DnsResponse setCode(DnsResponseCode code) {
-        this.code = checkNotNull(code, "code");
+        this.code = checkNotNull(code, "codec");
         return this;
     }
 

@@ -68,7 +68,7 @@ public class Bzip2Encoder extends MessageToByteEncoder<ByteBuf> {
     private Bzip2BlockCompressor blockCompressor;
 
     /**
-     * (@code true} if the compressed stream has been finished, otherwise {@code false}.
+     * (@codec true} if the compressed stream has been finished, otherwise {@code false}.
      */
     private volatile boolean finished;
 

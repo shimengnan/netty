@@ -37,7 +37,7 @@ import java.util.List;
  * <p>
  * Please note that this is an abstract class.  You have to extend this class
  * and implement {@link #newContentDecoder(String)} properly to make this class
- * functional.  For example, refer to the source code of {@link HttpContentDecompressor}.
+ * functional.  For example, refer to the source codec of {@link HttpContentDecompressor}.
  * <p>
  * This handler must be placed after {@link HttpObjectDecoder} in the pipeline
  * so that this handler can intercept HTTP requests after {@link HttpObjectDecoder}

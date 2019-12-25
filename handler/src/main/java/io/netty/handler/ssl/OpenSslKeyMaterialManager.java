@@ -38,7 +38,7 @@ import static io.netty.handler.ssl.ReferenceCountedOpenSslContext.toBIO;
  */
 class OpenSslKeyMaterialManager {
 
-    // Code in this class is inspired by code of conscrypts:
+    // Code in this class is inspired by codec of conscrypts:
     // - https://android.googlesource.com/platform/external/
     //   conscrypt/+/master/src/main/java/org/conscrypt/OpenSSLEngineImpl.java
     // - https://android.googlesource.com/platform/external/

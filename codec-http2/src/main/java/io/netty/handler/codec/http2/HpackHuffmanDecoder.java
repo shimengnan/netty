@@ -111,11 +111,11 @@ final class HpackHuffmanDecoder {
     }
 
     private static void insert(Node root, int symbol, int code, byte length) {
-        // traverse tree using the most significant bytes of code
+        // traverse tree using the most significant bytes of codec
         Node current = root;
         while (length > 8) {
             if (current.isTerminal()) {
-                throw new IllegalStateException("invalid Huffman code: prefix not unique");
+                throw new IllegalStateException("invalid Huffman codec: prefix not unique");
             }
             length -= 8;
             int i = (code >>> length) & 0xFF;
@@ -159,11 +159,11 @@ final class HpackHuffmanDecoder {
         /*
          * The idea here is to consume whole bytes at a time rather than individual bits. node
          * represents the Huffman tree, with all bit patterns denormalized as 256 children. Each
-         * child represents the last 8 bits of the huffman code. The parents of each child each
+         * child represents the last 8 bits of the huffman codec. The parents of each child each
          * represent the successive 8 bit chunks that lead up to the last most part. 8 bit bytes
          * from buf are used to traverse these tree until a terminal node is found.
          *
-         * current is a bit buffer. The low order bits represent how much of the huffman code has
+         * current is a bit buffer. The low order bits represent how much of the huffman codec has
          * not been used to traverse the tree. Thus, the high order bits are just garbage.
          * currentBits represents how many of the low order bits of current are actually valid.
          * currentBits will vary between 0 and 15.
@@ -219,7 +219,7 @@ final class HpackHuffmanDecoder {
 
             // Section 5.2. String Literal Representation
             // A padding strictly longer than 7 bits MUST be treated as a decoding error.
-            // Padding not corresponding to the most significant bits of the code
+            // Padding not corresponding to the most significant bits of the codec
             // for the EOS symbol (0xFF) MUST be treated as a decoding error.
             int mask = (1 << symbolBits) - 1;
             if (symbolBits > 7 || (current & mask) != mask) {

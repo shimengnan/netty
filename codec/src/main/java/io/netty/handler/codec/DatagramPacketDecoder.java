@@ -28,10 +28,10 @@ import java.util.List;
  * A decoder that decodes the content of the received {@link DatagramPacket} using
  * the specified {@link ByteBuf} decoder. E.g.,
  *
- * <pre><code>
+ * <pre><codec>
  * {@link ChannelPipeline} pipeline = ...;
  * pipeline.addLast("udpDecoder", new {@link DatagramPacketDecoder}(new {@link ProtobufDecoder}(...));
- * </code></pre>
+ * </codec></pre>
  */
 public class DatagramPacketDecoder extends MessageToMessageDecoder<DatagramPacket> {
 

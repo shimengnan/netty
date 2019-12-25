@@ -147,7 +147,7 @@ public final class ByteBufUtil {
     }
 
     /**
-     * Calculates the hash code of the specified buffer.  This method is
+     * Calculates the hash codec of the specified buffer.  This method is
      * useful when implementing a new buffer type.
      */
     public static int hashCode(ByteBuf buffer) {

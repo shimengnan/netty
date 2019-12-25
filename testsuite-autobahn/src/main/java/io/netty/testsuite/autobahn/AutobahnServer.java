@@ -46,7 +46,7 @@ public class AutobahnServer {
              .childHandler(new AutobahnServerInitializer());
 
             ChannelFuture f = b.bind(port).sync();
-            System.out.println("Web Socket Server started at port " + port);
+            System.out.println("Web Socket server started at port " + port);
             f.channel().closeFuture().sync();
         } finally {
             bossGroup.shutdownGracefully();

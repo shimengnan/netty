@@ -259,7 +259,7 @@ public class HAProxyMessageDecoder extends ByteToMessageDecoder {
 
     /**
      * Create a frame out of the {@link ByteBuf} and return it.
-     * Based on code from {@link LineBasedFrameDecoder#decode(ChannelHandlerContext, ByteBuf)}.
+     * Based on codec from {@link LineBasedFrameDecoder#decode(ChannelHandlerContext, ByteBuf)}.
      *
      * @param ctx     the {@link ChannelHandlerContext} which this {@link HAProxyMessageDecoder} belongs to
      * @param buffer  the {@link ByteBuf} from which to read data
@@ -302,7 +302,7 @@ public class HAProxyMessageDecoder extends ByteToMessageDecoder {
 
     /**
      * Create a frame out of the {@link ByteBuf} and return it.
-     * Based on code from {@link LineBasedFrameDecoder#decode(ChannelHandlerContext, ByteBuf)}.
+     * Based on codec from {@link LineBasedFrameDecoder#decode(ChannelHandlerContext, ByteBuf)}.
      *
      * @param ctx     the {@link ChannelHandlerContext} which this {@link HAProxyMessageDecoder} belongs to
      * @param buffer  the {@link ByteBuf} from which to read data

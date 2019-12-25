@@ -21,7 +21,7 @@ package io.netty.handler.codec.compression;
  * This class provides methods for compression and decompression of buffers and saves
  * constants which use by {@link FastLzFrameEncoder} and {@link FastLzFrameDecoder}.
  *
- * This is refactored code of <a href="https://code.google.com/p/jfastlz/">jfastlz</a>
+ * This is refactored codec of <a href="https://code.google.com/p/jfastlz/">jfastlz</a>
  * library written by William Kinney.
  */
 final class FastLz {
@@ -472,7 +472,7 @@ final class FastLz {
                     ref -= code;
 
                     /* match from 16-bit distance */
-                    // if(FASTLZ_UNEXPECT_CONDITIONAL(code==255))
+                    // if(FASTLZ_UNEXPECT_CONDITIONAL(codec==255))
                     // if(FASTLZ_EXPECT_CONDITIONAL(ofs==(31 << 8)))
                     if (code == 255 && ofs == 31 << 8) {
                         ofs = (input[inOffset + ip++] & 0xFF) << 8;

@@ -159,7 +159,7 @@ public class OcspTest {
     }
 
     /**
-     * The Server provides an OCSP staple and the Client accepts it.
+     * The server provides an OCSP staple and the Client accepts it.
      */
     private void testClientAcceptingOcspStaple(SslProvider sslProvider) throws Exception {
         final CountDownLatch latch = new CountDownLatch(1);
@@ -205,7 +205,7 @@ public class OcspTest {
     }
 
     /**
-     * The Server provides an OCSP staple and the Client rejects it.
+     * The server provides an OCSP staple and the Client rejects it.
      */
     private void testClientRejectingOcspStaple(SslProvider sslProvider) throws Exception {
         final AtomicReference<Throwable> causeRef = new AtomicReference<Throwable>();

@@ -20,7 +20,7 @@ import static io.netty.handler.codec.http.cookie.CookieUtil.firstInvalidCookieVa
 import static io.netty.handler.codec.http.cookie.CookieUtil.unwrapValue;
 
 /**
- * Parent of Client and Server side cookie encoders
+ * Parent of Client and server side cookie encoders
  */
 public abstract class CookieEncoder {
 

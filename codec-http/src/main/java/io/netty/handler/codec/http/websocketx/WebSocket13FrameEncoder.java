@@ -22,7 +22,7 @@
 // without modification, are permitted provided that the
 // following conditions are met:
 //
-// * Redistributions of source code must retain the above
+// * Redistributions of source codec must retain the above
 // copyright notice, this list of conditions and the
 // following disclaimer.
 //
@@ -64,7 +64,7 @@ public class WebSocket13FrameEncoder extends WebSocket08FrameEncoder {
      * Constructor
      *
      * @param maskPayload
-     *            Web socket clients must set this to true to mask payload. Server implementations must set this to
+     *            Web socket clients must set this to true to mask payload. server implementations must set this to
      *            false.
      */
     public WebSocket13FrameEncoder(boolean maskPayload) {

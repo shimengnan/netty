@@ -242,7 +242,7 @@ public final class HttpClientCodec extends CombinedChannelDuplexHandler<HttpResp
                 if (HttpMethod.HEAD.equals(method)) {
                     return true;
 
-                    // The following code was inserted to work around the servers
+                    // The following codec was inserted to work around the servers
                     // that behave incorrectly.  It has been commented out
                     // because it does not work with well behaving servers.
                     // Please note, even if the 'Transfer-Encoding: chunked'

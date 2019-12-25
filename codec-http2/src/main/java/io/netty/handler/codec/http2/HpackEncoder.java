@@ -454,7 +454,7 @@ final class HpackEncoder {
     }
 
     /**
-     * Returns the index into the hash table for the hash code h.
+     * Returns the index into the hash table for the hash codec h.
      */
     private int index(int h) {
         return h & hashMask;

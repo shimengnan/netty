@@ -22,7 +22,7 @@
 // without modification, are permitted provided that the
 // following conditions are met:
 //
-// * Redistributions of source code must retain the above
+// * Redistributions of source codec must retain the above
 // copyright notice, this list of conditions and the
 // following disclaimer.
 //
@@ -69,7 +69,7 @@ import java.util.List;
 import static io.netty.buffer.ByteBufUtil.readBytes;
 
 /**
- * Decodes a web socket frame from wire protocol version 8 format. This code was forked from <a
+ * Decodes a web socket frame from wire protocol version 8 format. This codec was forked from <a
  * href="https://github.com/joewalnes/webbit">webbit</a> and modified.
  */
 public class WebSocket08FrameDecoder extends ByteToMessageDecoder
@@ -217,7 +217,7 @@ public class WebSocket08FrameDecoder extends ByteToMessageDecoder
 
                         // close frame : if there is a body, the first two bytes of the
                         // body MUST be a 2-byte unsigned integer (in network byte
-                        // order) representing a getStatus code
+                        // order) representing a getStatus codec
                         if (frameOpcode == 8 && framePayloadLen1 == 1) {
                             protocolViolation(ctx, "received close control frame with payload len 1");
                             return;
@@ -452,7 +452,7 @@ public class WebSocket08FrameDecoder extends ByteToMessageDecoder
         int statusCode = buffer.readShort();
         if (statusCode >= 0 && statusCode <= 999 || statusCode >= 1004 && statusCode <= 1006
                 || statusCode >= 1012 && statusCode <= 2999) {
-            protocolViolation(ctx, "Invalid close frame getStatus code: " + statusCode);
+            protocolViolation(ctx, "Invalid close frame getStatus codec: " + statusCode);
         }
 
         // May have UTF-8 message

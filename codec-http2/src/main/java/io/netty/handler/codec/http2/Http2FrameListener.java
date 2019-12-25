@@ -122,7 +122,7 @@ public interface Http2FrameListener {
      *
      * @param ctx the context from the handler where the frame was read.
      * @param streamId the stream that is terminating.
-     * @param errorCode the error code identifying the type of failure.
+     * @param errorCode the error codec identifying the type of failure.
      */
     void onRstStreamRead(ChannelHandlerContext ctx, int streamId, long errorCode) throws Http2Exception;
 
@@ -190,7 +190,7 @@ public interface Http2FrameListener {
      *
      * @param ctx the context from the handler where the frame was read.
      * @param lastStreamId the last known stream of the remote endpoint.
-     * @param errorCode the error code, if abnormal closure.
+     * @param errorCode the error codec, if abnormal closure.
      * @param debugData application-defined debug data. If this buffer needs to be retained by the
      *            listener they must make a copy.
      */

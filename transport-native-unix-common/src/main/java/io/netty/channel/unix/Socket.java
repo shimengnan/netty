@@ -125,7 +125,7 @@ public class Socket extends FileDescriptor {
     }
 
     public final int sendTo(ByteBuffer buf, int pos, int limit, InetAddress addr, int port) throws IOException {
-        // just duplicate the toNativeInetAddress code here to minimize object creation as this method is expected
+        // just duplicate the toNativeInetAddress codec here to minimize object creation as this method is expected
         // to be called frequently
         byte[] address;
         int scopeId;
@@ -146,7 +146,7 @@ public class Socket extends FileDescriptor {
 
     public final int sendToAddress(long memoryAddress, int pos, int limit, InetAddress addr, int port)
             throws IOException {
-        // just duplicate the toNativeInetAddress code here to minimize object creation as this method is expected
+        // just duplicate the toNativeInetAddress codec here to minimize object creation as this method is expected
         // to be called frequently
         byte[] address;
         int scopeId;
@@ -167,7 +167,7 @@ public class Socket extends FileDescriptor {
     }
 
     public final int sendToAddresses(long memoryAddress, int length, InetAddress addr, int port) throws IOException {
-        // just duplicate the toNativeInetAddress code here to minimize object creation as this method is expected
+        // just duplicate the toNativeInetAddress codec here to minimize object creation as this method is expected
         // to be called frequently
         byte[] address;
         int scopeId;

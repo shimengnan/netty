@@ -55,12 +55,12 @@ final class Bzip2Constants {
     static final int HUFFMAN_MAX_ALPHABET_SIZE = 258;
 
     /**
-     * The longest Huffman code length created by the encoder.
+     * The longest Huffman codec length created by the encoder.
      */
     static final int HUFFMAN_ENCODE_MAX_CODE_LENGTH = 20;
 
     /**
-     * The longest Huffman code length accepted by the decoder.
+     * The longest Huffman codec length accepted by the decoder.
      */
     static final int HUFFMAN_DECODE_MAX_CODE_LENGTH = 23;
 

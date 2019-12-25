@@ -98,11 +98,11 @@ public class SpdySessionHandler extends ChannelDuplexHandler {
              *
              * If an endpoint receives a data frame for a Stream-ID which is not open
              * and the endpoint has not sent a GOAWAY frame, it must issue a stream error
-             * with the error code INVALID_STREAM for the Stream-ID.
+             * with the error codec INVALID_STREAM for the Stream-ID.
              *
              * If an endpoint which created the stream receives a data frame before receiving
              * a SYN_REPLY on that stream, it is a protocol error, and the recipient must
-             * issue a stream error with the getStatus code PROTOCOL_ERROR for the Stream-ID.
+             * issue a stream error with the getStatus codec PROTOCOL_ERROR for the Stream-ID.
              *
              * If an endpoint receives multiple data frames for invalid Stream-IDs,
              * it may close the session.
@@ -218,10 +218,10 @@ public class SpdySessionHandler extends ChannelDuplexHandler {
              * the getStatus PROTOCOL_ERROR.
              *
              * If an endpoint receives multiple SYN_STREAM frames with the same active
-             * Stream-ID, it must issue a stream error with the getStatus code PROTOCOL_ERROR.
+             * Stream-ID, it must issue a stream error with the getStatus codec PROTOCOL_ERROR.
              *
              * The recipient can reject a stream by sending a stream error with the
-             * getStatus code REFUSED_STREAM.
+             * getStatus codec REFUSED_STREAM.
              */
 
             SpdySynStreamFrame spdySynStreamFrame = (SpdySynStreamFrame) msg;
@@ -256,7 +256,7 @@ public class SpdySessionHandler extends ChannelDuplexHandler {
              * SPDY SYN_REPLY frame processing requirements:
              *
              * If an endpoint receives multiple SYN_REPLY frames for the same active Stream-ID
-             * it must issue a stream error with the getStatus code STREAM_IN_USE.
+             * it must issue a stream error with the getStatus codec STREAM_IN_USE.
              */
 
             SpdySynReplyFrame spdySynReplyFrame = (SpdySynReplyFrame) msg;
@@ -383,7 +383,7 @@ public class SpdySessionHandler extends ChannelDuplexHandler {
              * SPDY WINDOW_UPDATE frame processing requirements:
              *
              * Receivers of a WINDOW_UPDATE that cause the window size to exceed 2^31
-             * must send a RST_STREAM with the getStatus code FLOW_CONTROL_ERROR.
+             * must send a RST_STREAM with the getStatus codec FLOW_CONTROL_ERROR.
              *
              * Sender should ignore all WINDOW_UPDATE frames associated with a stream
              * after sending the last frame for the stream.
@@ -654,7 +654,7 @@ public class SpdySessionHandler extends ChannelDuplexHandler {
      *
      * When a session error occurs, the endpoint encountering the error must first
      * send a GOAWAY frame with the Stream-ID of the most recently received stream
-     * from the remote endpoint, and the error code for why the session is terminating.
+     * from the remote endpoint, and the error codec for why the session is terminating.
      *
      * After sending the GOAWAY frame, the endpoint must close the TCP connection.
      */

@@ -33,7 +33,7 @@ import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.util.SelfSignedCertificate;
 
 /**
- * A SPDY Server that responds to a GET request with a Hello World.
+ * A SPDY server that responds to a GET request with a Hello World.
  * <p>
  * This class must be run with the JVM parameter: {@code java -Xbootclasspath/p:<path_to_npn_boot_jar> ...}.
  * The "path_to_npn_boot_jar" is the path on the file system for the NPN Boot Jar file which can be downloaded from

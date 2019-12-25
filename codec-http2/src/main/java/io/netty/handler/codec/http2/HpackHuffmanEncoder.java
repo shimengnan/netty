@@ -52,7 +52,7 @@ final class HpackHuffmanEncoder {
      * Creates a new Huffman encoder with the specified Huffman coding.
      *
      * @param codes the Huffman codes indexed by symbol
-     * @param lengths the length of each Huffman code
+     * @param lengths the length of each Huffman codec
      */
     private HpackHuffmanEncoder(int[] codes, byte[] lengths) {
         this.codes = codes;

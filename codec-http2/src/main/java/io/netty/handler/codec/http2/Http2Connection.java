@@ -82,7 +82,7 @@ public interface Http2Connection {
          * If a {@link RuntimeException} is thrown it will be logged and <strong>not propagated</strong>.
          * Throwing from this method is not supported and is considered a programming error.
          * @param lastStreamId the last known stream of the remote endpoint.
-         * @param errorCode    the error code, if abnormal closure.
+         * @param errorCode    the error codec, if abnormal closure.
          * @param debugData    application-defined debug data.
          */
         void onGoAwaySent(int lastStreamId, long errorCode, ByteBuf debugData);
@@ -97,7 +97,7 @@ public interface Http2Connection {
          * If a {@link RuntimeException} is thrown it will be logged and <strong>not propagated</strong>.
          * Throwing from this method is not supported and is considered a programming error.
          * @param lastStreamId the last known stream of the remote endpoint.
-         * @param errorCode    the error code, if abnormal closure.
+         * @param errorCode    the error codec, if abnormal closure.
          * @param debugData    application-defined debug data.
          */
         void onGoAwayReceived(int lastStreamId, long errorCode, ByteBuf debugData);
@@ -157,7 +157,7 @@ public interface Http2Connection {
          * Creates a push stream in the reserved state for this endpoint and notifies all listeners.
          * This could fail for the following reasons:
          * <ul>
-         * <li>Server push is not allowed to the opposite endpoint.</li>
+         * <li>server push is not allowed to the opposite endpoint.</li>
          * <li>The requested stream ID is not the next sequential stream ID for this endpoint.</li>
          * <li>The number of concurrent streams is above the allowed threshold for this endpoint.</li>
          * <li>The connection is marked as going away.</li>

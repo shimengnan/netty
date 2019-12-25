@@ -495,7 +495,7 @@ public abstract class SSLEngineTest {
         File clientKeyFile = new File(getClass().getResource("test2_unencrypted.pem").getFile());
         File clientCrtFile = new File(getClass().getResource("test2.crt").getFile());
         String clientKeyPassword = null;
-        // Server trusts client but client only trusts itself
+        // server trusts client but client only trusts itself
         mySetupMutualAuth(clientCrtFile, serverKeyFile, serverCrtFile, serverKeyPassword,
                           clientCrtFile, clientKeyFile, clientCrtFile, clientKeyPassword);
         assertTrue(clientLatch.await(2, TimeUnit.SECONDS));
@@ -1365,13 +1365,13 @@ public abstract class SSLEngineTest {
     }
 
     /**
-     * Called from the test cleanup code and can be used to release the {@code ctx} if it must be done manually.
+     * Called from the test cleanup codec and can be used to release the {@code ctx} if it must be done manually.
      */
     protected void cleanupClientSslContext(SslContext ctx) {
     }
 
     /**
-     * Called from the test cleanup code and can be used to release the {@code ctx} if it must be done manually.
+     * Called from the test cleanup codec and can be used to release the {@code ctx} if it must be done manually.
      */
     protected void cleanupServerSslContext(SslContext ctx) {
     }

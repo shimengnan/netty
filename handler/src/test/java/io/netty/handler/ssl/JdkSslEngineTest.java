@@ -108,7 +108,7 @@ public class JdkSslEngineTest extends SSLEngineTest {
         abstract Provider provider();
 
         final void activate(JdkSslEngineTest instance) {
-            // Typical code will not have to check this, but will get a initialization error on class load.
+            // Typical codec will not have to check this, but will get a initialization error on class load.
             // Check in this test just in case we have multiple tests that just the class and we already ignored the
             // initialization error.
             if (!isAvailable()) {

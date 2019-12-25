@@ -31,93 +31,93 @@ public final class WorldClockProtocol {
   public enum Continent
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>AFRICA = 0;</code>
+     * <codec>AFRICA = 0;</codec>
      */
     AFRICA(0, 0),
     /**
-     * <code>AMERICA = 1;</code>
+     * <codec>AMERICA = 1;</codec>
      */
     AMERICA(1, 1),
     /**
-     * <code>ANTARCTICA = 2;</code>
+     * <codec>ANTARCTICA = 2;</codec>
      */
     ANTARCTICA(2, 2),
     /**
-     * <code>ARCTIC = 3;</code>
+     * <codec>ARCTIC = 3;</codec>
      */
     ARCTIC(3, 3),
     /**
-     * <code>ASIA = 4;</code>
+     * <codec>ASIA = 4;</codec>
      */
     ASIA(4, 4),
     /**
-     * <code>ATLANTIC = 5;</code>
+     * <codec>ATLANTIC = 5;</codec>
      */
     ATLANTIC(5, 5),
     /**
-     * <code>AUSTRALIA = 6;</code>
+     * <codec>AUSTRALIA = 6;</codec>
      */
     AUSTRALIA(6, 6),
     /**
-     * <code>EUROPE = 7;</code>
+     * <codec>EUROPE = 7;</codec>
      */
     EUROPE(7, 7),
     /**
-     * <code>INDIAN = 8;</code>
+     * <codec>INDIAN = 8;</codec>
      */
     INDIAN(8, 8),
     /**
-     * <code>MIDEAST = 9;</code>
+     * <codec>MIDEAST = 9;</codec>
      */
     MIDEAST(9, 9),
     /**
-     * <code>PACIFIC = 10;</code>
+     * <codec>PACIFIC = 10;</codec>
      */
     PACIFIC(10, 10),
     ;
 
     /**
-     * <code>AFRICA = 0;</code>
+     * <codec>AFRICA = 0;</codec>
      */
     public static final int AFRICA_VALUE = 0;
     /**
-     * <code>AMERICA = 1;</code>
+     * <codec>AMERICA = 1;</codec>
      */
     public static final int AMERICA_VALUE = 1;
     /**
-     * <code>ANTARCTICA = 2;</code>
+     * <codec>ANTARCTICA = 2;</codec>
      */
     public static final int ANTARCTICA_VALUE = 2;
     /**
-     * <code>ARCTIC = 3;</code>
+     * <codec>ARCTIC = 3;</codec>
      */
     public static final int ARCTIC_VALUE = 3;
     /**
-     * <code>ASIA = 4;</code>
+     * <codec>ASIA = 4;</codec>
      */
     public static final int ASIA_VALUE = 4;
     /**
-     * <code>ATLANTIC = 5;</code>
+     * <codec>ATLANTIC = 5;</codec>
      */
     public static final int ATLANTIC_VALUE = 5;
     /**
-     * <code>AUSTRALIA = 6;</code>
+     * <codec>AUSTRALIA = 6;</codec>
      */
     public static final int AUSTRALIA_VALUE = 6;
     /**
-     * <code>EUROPE = 7;</code>
+     * <codec>EUROPE = 7;</codec>
      */
     public static final int EUROPE_VALUE = 7;
     /**
-     * <code>INDIAN = 8;</code>
+     * <codec>INDIAN = 8;</codec>
      */
     public static final int INDIAN_VALUE = 8;
     /**
-     * <code>MIDEAST = 9;</code>
+     * <codec>MIDEAST = 9;</codec>
      */
     public static final int MIDEAST_VALUE = 9;
     /**
-     * <code>PACIFIC = 10;</code>
+     * <codec>PACIFIC = 10;</codec>
      */
     public static final int PACIFIC_VALUE = 10;
 
@@ -194,61 +194,61 @@ public final class WorldClockProtocol {
   public enum DayOfWeek
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>SUNDAY = 1;</code>
+     * <codec>SUNDAY = 1;</codec>
      */
     SUNDAY(0, 1),
     /**
-     * <code>MONDAY = 2;</code>
+     * <codec>MONDAY = 2;</codec>
      */
     MONDAY(1, 2),
     /**
-     * <code>TUESDAY = 3;</code>
+     * <codec>TUESDAY = 3;</codec>
      */
     TUESDAY(2, 3),
     /**
-     * <code>WEDNESDAY = 4;</code>
+     * <codec>WEDNESDAY = 4;</codec>
      */
     WEDNESDAY(3, 4),
     /**
-     * <code>THURSDAY = 5;</code>
+     * <codec>THURSDAY = 5;</codec>
      */
     THURSDAY(4, 5),
     /**
-     * <code>FRIDAY = 6;</code>
+     * <codec>FRIDAY = 6;</codec>
      */
     FRIDAY(5, 6),
     /**
-     * <code>SATURDAY = 7;</code>
+     * <codec>SATURDAY = 7;</codec>
      */
     SATURDAY(6, 7),
     ;
 
     /**
-     * <code>SUNDAY = 1;</code>
+     * <codec>SUNDAY = 1;</codec>
      */
     public static final int SUNDAY_VALUE = 1;
     /**
-     * <code>MONDAY = 2;</code>
+     * <codec>MONDAY = 2;</codec>
      */
     public static final int MONDAY_VALUE = 2;
     /**
-     * <code>TUESDAY = 3;</code>
+     * <codec>TUESDAY = 3;</codec>
      */
     public static final int TUESDAY_VALUE = 3;
     /**
-     * <code>WEDNESDAY = 4;</code>
+     * <codec>WEDNESDAY = 4;</codec>
      */
     public static final int WEDNESDAY_VALUE = 4;
     /**
-     * <code>THURSDAY = 5;</code>
+     * <codec>THURSDAY = 5;</codec>
      */
     public static final int THURSDAY_VALUE = 5;
     /**
-     * <code>FRIDAY = 6;</code>
+     * <codec>FRIDAY = 6;</codec>
      */
     public static final int FRIDAY_VALUE = 6;
     /**
-     * <code>SATURDAY = 7;</code>
+     * <codec>SATURDAY = 7;</codec>
      */
     public static final int SATURDAY_VALUE = 7;
 
@@ -320,25 +320,25 @@ public final class WorldClockProtocol {
 
     // required .io.netty.example.worldclock.Continent continent = 1;
     /**
-     * <code>required .io.netty.example.worldclock.Continent continent = 1;</code>
+     * <codec>required .io.netty.example.worldclock.Continent continent = 1;</codec>
      */
     boolean hasContinent();
     /**
-     * <code>required .io.netty.example.worldclock.Continent continent = 1;</code>
+     * <codec>required .io.netty.example.worldclock.Continent continent = 1;</codec>
      */
     io.netty.example.worldclock.WorldClockProtocol.Continent getContinent();
 
     // required string city = 2;
     /**
-     * <code>required string city = 2;</code>
+     * <codec>required string city = 2;</codec>
      */
     boolean hasCity();
     /**
-     * <code>required string city = 2;</code>
+     * <codec>required string city = 2;</codec>
      */
     java.lang.String getCity();
     /**
-     * <code>required string city = 2;</code>
+     * <codec>required string city = 2;</codec>
      */
     com.google.protobuf.ByteString
         getCityBytes();
@@ -454,13 +454,13 @@ public final class WorldClockProtocol {
     public static final int CONTINENT_FIELD_NUMBER = 1;
     private io.netty.example.worldclock.WorldClockProtocol.Continent continent_;
     /**
-     * <code>required .io.netty.example.worldclock.Continent continent = 1;</code>
+     * <codec>required .io.netty.example.worldclock.Continent continent = 1;</codec>
      */
     public boolean hasContinent() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .io.netty.example.worldclock.Continent continent = 1;</code>
+     * <codec>required .io.netty.example.worldclock.Continent continent = 1;</codec>
      */
     public io.netty.example.worldclock.WorldClockProtocol.Continent getContinent() {
       return continent_;
@@ -470,13 +470,13 @@ public final class WorldClockProtocol {
     public static final int CITY_FIELD_NUMBER = 2;
     private java.lang.Object city_;
     /**
-     * <code>required string city = 2;</code>
+     * <codec>required string city = 2;</codec>
      */
     public boolean hasCity() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required string city = 2;</code>
+     * <codec>required string city = 2;</codec>
      */
     public java.lang.String getCity() {
       java.lang.Object ref = city_;
@@ -493,7 +493,7 @@ public final class WorldClockProtocol {
       }
     }
     /**
-     * <code>required string city = 2;</code>
+     * <codec>required string city = 2;</codec>
      */
     public com.google.protobuf.ByteString
         getCityBytes() {
@@ -774,19 +774,19 @@ public final class WorldClockProtocol {
       // required .io.netty.example.worldclock.Continent continent = 1;
       private io.netty.example.worldclock.WorldClockProtocol.Continent continent_ = io.netty.example.worldclock.WorldClockProtocol.Continent.AFRICA;
       /**
-       * <code>required .io.netty.example.worldclock.Continent continent = 1;</code>
+       * <codec>required .io.netty.example.worldclock.Continent continent = 1;</codec>
        */
       public boolean hasContinent() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .io.netty.example.worldclock.Continent continent = 1;</code>
+       * <codec>required .io.netty.example.worldclock.Continent continent = 1;</codec>
        */
       public io.netty.example.worldclock.WorldClockProtocol.Continent getContinent() {
         return continent_;
       }
       /**
-       * <code>required .io.netty.example.worldclock.Continent continent = 1;</code>
+       * <codec>required .io.netty.example.worldclock.Continent continent = 1;</codec>
        */
       public Builder setContinent(io.netty.example.worldclock.WorldClockProtocol.Continent value) {
         if (value == null) {
@@ -798,7 +798,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>required .io.netty.example.worldclock.Continent continent = 1;</code>
+       * <codec>required .io.netty.example.worldclock.Continent continent = 1;</codec>
        */
       public Builder clearContinent() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -810,13 +810,13 @@ public final class WorldClockProtocol {
       // required string city = 2;
       private java.lang.Object city_ = "";
       /**
-       * <code>required string city = 2;</code>
+       * <codec>required string city = 2;</codec>
        */
       public boolean hasCity() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required string city = 2;</code>
+       * <codec>required string city = 2;</codec>
        */
       public java.lang.String getCity() {
         java.lang.Object ref = city_;
@@ -830,7 +830,7 @@ public final class WorldClockProtocol {
         }
       }
       /**
-       * <code>required string city = 2;</code>
+       * <codec>required string city = 2;</codec>
        */
       public com.google.protobuf.ByteString
           getCityBytes() {
@@ -846,7 +846,7 @@ public final class WorldClockProtocol {
         }
       }
       /**
-       * <code>required string city = 2;</code>
+       * <codec>required string city = 2;</codec>
        */
       public Builder setCity(
           java.lang.String value) {
@@ -859,7 +859,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>required string city = 2;</code>
+       * <codec>required string city = 2;</codec>
        */
       public Builder clearCity() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -868,7 +868,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>required string city = 2;</code>
+       * <codec>required string city = 2;</codec>
        */
       public Builder setCityBytes(
           com.google.protobuf.ByteString value) {
@@ -897,25 +897,25 @@ public final class WorldClockProtocol {
 
     // repeated .io.netty.example.worldclock.Location location = 1;
     /**
-     * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
      */
     java.util.List<io.netty.example.worldclock.WorldClockProtocol.Location> 
         getLocationList();
     /**
-     * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
      */
     io.netty.example.worldclock.WorldClockProtocol.Location getLocation(int index);
     /**
-     * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
      */
     int getLocationCount();
     /**
-     * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
      */
     java.util.List<? extends io.netty.example.worldclock.WorldClockProtocol.LocationOrBuilder> 
         getLocationOrBuilderList();
     /**
-     * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
      */
     io.netty.example.worldclock.WorldClockProtocol.LocationOrBuilder getLocationOrBuilder(
         int index);
@@ -1025,32 +1025,32 @@ public final class WorldClockProtocol {
     public static final int LOCATION_FIELD_NUMBER = 1;
     private java.util.List<io.netty.example.worldclock.WorldClockProtocol.Location> location_;
     /**
-     * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
      */
     public java.util.List<io.netty.example.worldclock.WorldClockProtocol.Location> getLocationList() {
       return location_;
     }
     /**
-     * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
      */
     public java.util.List<? extends io.netty.example.worldclock.WorldClockProtocol.LocationOrBuilder> 
         getLocationOrBuilderList() {
       return location_;
     }
     /**
-     * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
      */
     public int getLocationCount() {
       return location_.size();
     }
     /**
-     * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
      */
     public io.netty.example.worldclock.WorldClockProtocol.Location getLocation(int index) {
       return location_.get(index);
     }
     /**
-     * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
      */
     public io.netty.example.worldclock.WorldClockProtocol.LocationOrBuilder getLocationOrBuilder(
         int index) {
@@ -1341,7 +1341,7 @@ public final class WorldClockProtocol {
           io.netty.example.worldclock.WorldClockProtocol.Location, io.netty.example.worldclock.WorldClockProtocol.Location.Builder, io.netty.example.worldclock.WorldClockProtocol.LocationOrBuilder> locationBuilder_;
 
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public java.util.List<io.netty.example.worldclock.WorldClockProtocol.Location> getLocationList() {
         if (locationBuilder_ == null) {
@@ -1351,7 +1351,7 @@ public final class WorldClockProtocol {
         }
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public int getLocationCount() {
         if (locationBuilder_ == null) {
@@ -1361,7 +1361,7 @@ public final class WorldClockProtocol {
         }
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public io.netty.example.worldclock.WorldClockProtocol.Location getLocation(int index) {
         if (locationBuilder_ == null) {
@@ -1371,7 +1371,7 @@ public final class WorldClockProtocol {
         }
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public Builder setLocation(
           int index, io.netty.example.worldclock.WorldClockProtocol.Location value) {
@@ -1388,7 +1388,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public Builder setLocation(
           int index, io.netty.example.worldclock.WorldClockProtocol.Location.Builder builderForValue) {
@@ -1402,7 +1402,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public Builder addLocation(io.netty.example.worldclock.WorldClockProtocol.Location value) {
         if (locationBuilder_ == null) {
@@ -1418,7 +1418,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public Builder addLocation(
           int index, io.netty.example.worldclock.WorldClockProtocol.Location value) {
@@ -1435,7 +1435,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public Builder addLocation(
           io.netty.example.worldclock.WorldClockProtocol.Location.Builder builderForValue) {
@@ -1449,7 +1449,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public Builder addLocation(
           int index, io.netty.example.worldclock.WorldClockProtocol.Location.Builder builderForValue) {
@@ -1463,7 +1463,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public Builder addAllLocation(
           java.lang.Iterable<? extends io.netty.example.worldclock.WorldClockProtocol.Location> values) {
@@ -1477,7 +1477,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
@@ -1490,7 +1490,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public Builder removeLocation(int index) {
         if (locationBuilder_ == null) {
@@ -1503,14 +1503,14 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public io.netty.example.worldclock.WorldClockProtocol.Location.Builder getLocationBuilder(
           int index) {
         return getLocationFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public io.netty.example.worldclock.WorldClockProtocol.LocationOrBuilder getLocationOrBuilder(
           int index) {
@@ -1520,7 +1520,7 @@ public final class WorldClockProtocol {
         }
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public java.util.List<? extends io.netty.example.worldclock.WorldClockProtocol.LocationOrBuilder> 
            getLocationOrBuilderList() {
@@ -1531,14 +1531,14 @@ public final class WorldClockProtocol {
         }
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public io.netty.example.worldclock.WorldClockProtocol.Location.Builder addLocationBuilder() {
         return getLocationFieldBuilder().addBuilder(
             io.netty.example.worldclock.WorldClockProtocol.Location.getDefaultInstance());
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public io.netty.example.worldclock.WorldClockProtocol.Location.Builder addLocationBuilder(
           int index) {
@@ -1546,7 +1546,7 @@ public final class WorldClockProtocol {
             index, io.netty.example.worldclock.WorldClockProtocol.Location.getDefaultInstance());
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.Location location = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.Location location = 1;</codec>
        */
       public java.util.List<io.netty.example.worldclock.WorldClockProtocol.Location.Builder> 
            getLocationBuilderList() {
@@ -1583,71 +1583,71 @@ public final class WorldClockProtocol {
 
     // required uint32 year = 1;
     /**
-     * <code>required uint32 year = 1;</code>
+     * <codec>required uint32 year = 1;</codec>
      */
     boolean hasYear();
     /**
-     * <code>required uint32 year = 1;</code>
+     * <codec>required uint32 year = 1;</codec>
      */
     int getYear();
 
     // required uint32 month = 2;
     /**
-     * <code>required uint32 month = 2;</code>
+     * <codec>required uint32 month = 2;</codec>
      */
     boolean hasMonth();
     /**
-     * <code>required uint32 month = 2;</code>
+     * <codec>required uint32 month = 2;</codec>
      */
     int getMonth();
 
     // required uint32 dayOfMonth = 4;
     /**
-     * <code>required uint32 dayOfMonth = 4;</code>
+     * <codec>required uint32 dayOfMonth = 4;</codec>
      */
     boolean hasDayOfMonth();
     /**
-     * <code>required uint32 dayOfMonth = 4;</code>
+     * <codec>required uint32 dayOfMonth = 4;</codec>
      */
     int getDayOfMonth();
 
     // required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;
     /**
-     * <code>required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;</code>
+     * <codec>required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;</codec>
      */
     boolean hasDayOfWeek();
     /**
-     * <code>required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;</code>
+     * <codec>required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;</codec>
      */
     io.netty.example.worldclock.WorldClockProtocol.DayOfWeek getDayOfWeek();
 
     // required uint32 hour = 6;
     /**
-     * <code>required uint32 hour = 6;</code>
+     * <codec>required uint32 hour = 6;</codec>
      */
     boolean hasHour();
     /**
-     * <code>required uint32 hour = 6;</code>
+     * <codec>required uint32 hour = 6;</codec>
      */
     int getHour();
 
     // required uint32 minute = 7;
     /**
-     * <code>required uint32 minute = 7;</code>
+     * <codec>required uint32 minute = 7;</codec>
      */
     boolean hasMinute();
     /**
-     * <code>required uint32 minute = 7;</code>
+     * <codec>required uint32 minute = 7;</codec>
      */
     int getMinute();
 
     // required uint32 second = 8;
     /**
-     * <code>required uint32 second = 8;</code>
+     * <codec>required uint32 second = 8;</codec>
      */
     boolean hasSecond();
     /**
-     * <code>required uint32 second = 8;</code>
+     * <codec>required uint32 second = 8;</codec>
      */
     int getSecond();
   }
@@ -1787,13 +1787,13 @@ public final class WorldClockProtocol {
     public static final int YEAR_FIELD_NUMBER = 1;
     private int year_;
     /**
-     * <code>required uint32 year = 1;</code>
+     * <codec>required uint32 year = 1;</codec>
      */
     public boolean hasYear() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required uint32 year = 1;</code>
+     * <codec>required uint32 year = 1;</codec>
      */
     public int getYear() {
       return year_;
@@ -1803,13 +1803,13 @@ public final class WorldClockProtocol {
     public static final int MONTH_FIELD_NUMBER = 2;
     private int month_;
     /**
-     * <code>required uint32 month = 2;</code>
+     * <codec>required uint32 month = 2;</codec>
      */
     public boolean hasMonth() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required uint32 month = 2;</code>
+     * <codec>required uint32 month = 2;</codec>
      */
     public int getMonth() {
       return month_;
@@ -1819,13 +1819,13 @@ public final class WorldClockProtocol {
     public static final int DAYOFMONTH_FIELD_NUMBER = 4;
     private int dayOfMonth_;
     /**
-     * <code>required uint32 dayOfMonth = 4;</code>
+     * <codec>required uint32 dayOfMonth = 4;</codec>
      */
     public boolean hasDayOfMonth() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>required uint32 dayOfMonth = 4;</code>
+     * <codec>required uint32 dayOfMonth = 4;</codec>
      */
     public int getDayOfMonth() {
       return dayOfMonth_;
@@ -1835,13 +1835,13 @@ public final class WorldClockProtocol {
     public static final int DAYOFWEEK_FIELD_NUMBER = 5;
     private io.netty.example.worldclock.WorldClockProtocol.DayOfWeek dayOfWeek_;
     /**
-     * <code>required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;</code>
+     * <codec>required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;</codec>
      */
     public boolean hasDayOfWeek() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;</code>
+     * <codec>required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;</codec>
      */
     public io.netty.example.worldclock.WorldClockProtocol.DayOfWeek getDayOfWeek() {
       return dayOfWeek_;
@@ -1851,13 +1851,13 @@ public final class WorldClockProtocol {
     public static final int HOUR_FIELD_NUMBER = 6;
     private int hour_;
     /**
-     * <code>required uint32 hour = 6;</code>
+     * <codec>required uint32 hour = 6;</codec>
      */
     public boolean hasHour() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>required uint32 hour = 6;</code>
+     * <codec>required uint32 hour = 6;</codec>
      */
     public int getHour() {
       return hour_;
@@ -1867,13 +1867,13 @@ public final class WorldClockProtocol {
     public static final int MINUTE_FIELD_NUMBER = 7;
     private int minute_;
     /**
-     * <code>required uint32 minute = 7;</code>
+     * <codec>required uint32 minute = 7;</codec>
      */
     public boolean hasMinute() {
       return ((bitField0_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>required uint32 minute = 7;</code>
+     * <codec>required uint32 minute = 7;</codec>
      */
     public int getMinute() {
       return minute_;
@@ -1883,13 +1883,13 @@ public final class WorldClockProtocol {
     public static final int SECOND_FIELD_NUMBER = 8;
     private int second_;
     /**
-     * <code>required uint32 second = 8;</code>
+     * <codec>required uint32 second = 8;</codec>
      */
     public boolean hasSecond() {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>required uint32 second = 8;</code>
+     * <codec>required uint32 second = 8;</codec>
      */
     public int getSecond() {
       return second_;
@@ -2283,19 +2283,19 @@ public final class WorldClockProtocol {
       // required uint32 year = 1;
       private int year_ ;
       /**
-       * <code>required uint32 year = 1;</code>
+       * <codec>required uint32 year = 1;</codec>
        */
       public boolean hasYear() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required uint32 year = 1;</code>
+       * <codec>required uint32 year = 1;</codec>
        */
       public int getYear() {
         return year_;
       }
       /**
-       * <code>required uint32 year = 1;</code>
+       * <codec>required uint32 year = 1;</codec>
        */
       public Builder setYear(int value) {
         bitField0_ |= 0x00000001;
@@ -2304,7 +2304,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>required uint32 year = 1;</code>
+       * <codec>required uint32 year = 1;</codec>
        */
       public Builder clearYear() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -2316,19 +2316,19 @@ public final class WorldClockProtocol {
       // required uint32 month = 2;
       private int month_ ;
       /**
-       * <code>required uint32 month = 2;</code>
+       * <codec>required uint32 month = 2;</codec>
        */
       public boolean hasMonth() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required uint32 month = 2;</code>
+       * <codec>required uint32 month = 2;</codec>
        */
       public int getMonth() {
         return month_;
       }
       /**
-       * <code>required uint32 month = 2;</code>
+       * <codec>required uint32 month = 2;</codec>
        */
       public Builder setMonth(int value) {
         bitField0_ |= 0x00000002;
@@ -2337,7 +2337,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>required uint32 month = 2;</code>
+       * <codec>required uint32 month = 2;</codec>
        */
       public Builder clearMonth() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -2349,19 +2349,19 @@ public final class WorldClockProtocol {
       // required uint32 dayOfMonth = 4;
       private int dayOfMonth_ ;
       /**
-       * <code>required uint32 dayOfMonth = 4;</code>
+       * <codec>required uint32 dayOfMonth = 4;</codec>
        */
       public boolean hasDayOfMonth() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>required uint32 dayOfMonth = 4;</code>
+       * <codec>required uint32 dayOfMonth = 4;</codec>
        */
       public int getDayOfMonth() {
         return dayOfMonth_;
       }
       /**
-       * <code>required uint32 dayOfMonth = 4;</code>
+       * <codec>required uint32 dayOfMonth = 4;</codec>
        */
       public Builder setDayOfMonth(int value) {
         bitField0_ |= 0x00000004;
@@ -2370,7 +2370,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>required uint32 dayOfMonth = 4;</code>
+       * <codec>required uint32 dayOfMonth = 4;</codec>
        */
       public Builder clearDayOfMonth() {
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -2382,19 +2382,19 @@ public final class WorldClockProtocol {
       // required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;
       private io.netty.example.worldclock.WorldClockProtocol.DayOfWeek dayOfWeek_ = io.netty.example.worldclock.WorldClockProtocol.DayOfWeek.SUNDAY;
       /**
-       * <code>required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;</code>
+       * <codec>required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;</codec>
        */
       public boolean hasDayOfWeek() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;</code>
+       * <codec>required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;</codec>
        */
       public io.netty.example.worldclock.WorldClockProtocol.DayOfWeek getDayOfWeek() {
         return dayOfWeek_;
       }
       /**
-       * <code>required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;</code>
+       * <codec>required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;</codec>
        */
       public Builder setDayOfWeek(io.netty.example.worldclock.WorldClockProtocol.DayOfWeek value) {
         if (value == null) {
@@ -2406,7 +2406,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;</code>
+       * <codec>required .io.netty.example.worldclock.DayOfWeek dayOfWeek = 5;</codec>
        */
       public Builder clearDayOfWeek() {
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -2418,19 +2418,19 @@ public final class WorldClockProtocol {
       // required uint32 hour = 6;
       private int hour_ ;
       /**
-       * <code>required uint32 hour = 6;</code>
+       * <codec>required uint32 hour = 6;</codec>
        */
       public boolean hasHour() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>required uint32 hour = 6;</code>
+       * <codec>required uint32 hour = 6;</codec>
        */
       public int getHour() {
         return hour_;
       }
       /**
-       * <code>required uint32 hour = 6;</code>
+       * <codec>required uint32 hour = 6;</codec>
        */
       public Builder setHour(int value) {
         bitField0_ |= 0x00000010;
@@ -2439,7 +2439,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>required uint32 hour = 6;</code>
+       * <codec>required uint32 hour = 6;</codec>
        */
       public Builder clearHour() {
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -2451,19 +2451,19 @@ public final class WorldClockProtocol {
       // required uint32 minute = 7;
       private int minute_ ;
       /**
-       * <code>required uint32 minute = 7;</code>
+       * <codec>required uint32 minute = 7;</codec>
        */
       public boolean hasMinute() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>required uint32 minute = 7;</code>
+       * <codec>required uint32 minute = 7;</codec>
        */
       public int getMinute() {
         return minute_;
       }
       /**
-       * <code>required uint32 minute = 7;</code>
+       * <codec>required uint32 minute = 7;</codec>
        */
       public Builder setMinute(int value) {
         bitField0_ |= 0x00000020;
@@ -2472,7 +2472,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>required uint32 minute = 7;</code>
+       * <codec>required uint32 minute = 7;</codec>
        */
       public Builder clearMinute() {
         bitField0_ = (bitField0_ & ~0x00000020);
@@ -2484,19 +2484,19 @@ public final class WorldClockProtocol {
       // required uint32 second = 8;
       private int second_ ;
       /**
-       * <code>required uint32 second = 8;</code>
+       * <codec>required uint32 second = 8;</codec>
        */
       public boolean hasSecond() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>required uint32 second = 8;</code>
+       * <codec>required uint32 second = 8;</codec>
        */
       public int getSecond() {
         return second_;
       }
       /**
-       * <code>required uint32 second = 8;</code>
+       * <codec>required uint32 second = 8;</codec>
        */
       public Builder setSecond(int value) {
         bitField0_ |= 0x00000040;
@@ -2505,7 +2505,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>required uint32 second = 8;</code>
+       * <codec>required uint32 second = 8;</codec>
        */
       public Builder clearSecond() {
         bitField0_ = (bitField0_ & ~0x00000040);
@@ -2530,25 +2530,25 @@ public final class WorldClockProtocol {
 
     // repeated .io.netty.example.worldclock.LocalTime localTime = 1;
     /**
-     * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
      */
     java.util.List<io.netty.example.worldclock.WorldClockProtocol.LocalTime> 
         getLocalTimeList();
     /**
-     * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
      */
     io.netty.example.worldclock.WorldClockProtocol.LocalTime getLocalTime(int index);
     /**
-     * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
      */
     int getLocalTimeCount();
     /**
-     * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
      */
     java.util.List<? extends io.netty.example.worldclock.WorldClockProtocol.LocalTimeOrBuilder> 
         getLocalTimeOrBuilderList();
     /**
-     * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
      */
     io.netty.example.worldclock.WorldClockProtocol.LocalTimeOrBuilder getLocalTimeOrBuilder(
         int index);
@@ -2658,32 +2658,32 @@ public final class WorldClockProtocol {
     public static final int LOCALTIME_FIELD_NUMBER = 1;
     private java.util.List<io.netty.example.worldclock.WorldClockProtocol.LocalTime> localTime_;
     /**
-     * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
      */
     public java.util.List<io.netty.example.worldclock.WorldClockProtocol.LocalTime> getLocalTimeList() {
       return localTime_;
     }
     /**
-     * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
      */
     public java.util.List<? extends io.netty.example.worldclock.WorldClockProtocol.LocalTimeOrBuilder> 
         getLocalTimeOrBuilderList() {
       return localTime_;
     }
     /**
-     * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
      */
     public int getLocalTimeCount() {
       return localTime_.size();
     }
     /**
-     * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
      */
     public io.netty.example.worldclock.WorldClockProtocol.LocalTime getLocalTime(int index) {
       return localTime_.get(index);
     }
     /**
-     * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+     * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
      */
     public io.netty.example.worldclock.WorldClockProtocol.LocalTimeOrBuilder getLocalTimeOrBuilder(
         int index) {
@@ -2974,7 +2974,7 @@ public final class WorldClockProtocol {
           io.netty.example.worldclock.WorldClockProtocol.LocalTime, io.netty.example.worldclock.WorldClockProtocol.LocalTime.Builder, io.netty.example.worldclock.WorldClockProtocol.LocalTimeOrBuilder> localTimeBuilder_;
 
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public java.util.List<io.netty.example.worldclock.WorldClockProtocol.LocalTime> getLocalTimeList() {
         if (localTimeBuilder_ == null) {
@@ -2984,7 +2984,7 @@ public final class WorldClockProtocol {
         }
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public int getLocalTimeCount() {
         if (localTimeBuilder_ == null) {
@@ -2994,7 +2994,7 @@ public final class WorldClockProtocol {
         }
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public io.netty.example.worldclock.WorldClockProtocol.LocalTime getLocalTime(int index) {
         if (localTimeBuilder_ == null) {
@@ -3004,7 +3004,7 @@ public final class WorldClockProtocol {
         }
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public Builder setLocalTime(
           int index, io.netty.example.worldclock.WorldClockProtocol.LocalTime value) {
@@ -3021,7 +3021,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public Builder setLocalTime(
           int index, io.netty.example.worldclock.WorldClockProtocol.LocalTime.Builder builderForValue) {
@@ -3035,7 +3035,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public Builder addLocalTime(io.netty.example.worldclock.WorldClockProtocol.LocalTime value) {
         if (localTimeBuilder_ == null) {
@@ -3051,7 +3051,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public Builder addLocalTime(
           int index, io.netty.example.worldclock.WorldClockProtocol.LocalTime value) {
@@ -3068,7 +3068,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public Builder addLocalTime(
           io.netty.example.worldclock.WorldClockProtocol.LocalTime.Builder builderForValue) {
@@ -3082,7 +3082,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public Builder addLocalTime(
           int index, io.netty.example.worldclock.WorldClockProtocol.LocalTime.Builder builderForValue) {
@@ -3096,7 +3096,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public Builder addAllLocalTime(
           java.lang.Iterable<? extends io.netty.example.worldclock.WorldClockProtocol.LocalTime> values) {
@@ -3110,7 +3110,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public Builder clearLocalTime() {
         if (localTimeBuilder_ == null) {
@@ -3123,7 +3123,7 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public Builder removeLocalTime(int index) {
         if (localTimeBuilder_ == null) {
@@ -3136,14 +3136,14 @@ public final class WorldClockProtocol {
         return this;
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public io.netty.example.worldclock.WorldClockProtocol.LocalTime.Builder getLocalTimeBuilder(
           int index) {
         return getLocalTimeFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public io.netty.example.worldclock.WorldClockProtocol.LocalTimeOrBuilder getLocalTimeOrBuilder(
           int index) {
@@ -3153,7 +3153,7 @@ public final class WorldClockProtocol {
         }
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public java.util.List<? extends io.netty.example.worldclock.WorldClockProtocol.LocalTimeOrBuilder> 
            getLocalTimeOrBuilderList() {
@@ -3164,14 +3164,14 @@ public final class WorldClockProtocol {
         }
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public io.netty.example.worldclock.WorldClockProtocol.LocalTime.Builder addLocalTimeBuilder() {
         return getLocalTimeFieldBuilder().addBuilder(
             io.netty.example.worldclock.WorldClockProtocol.LocalTime.getDefaultInstance());
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public io.netty.example.worldclock.WorldClockProtocol.LocalTime.Builder addLocalTimeBuilder(
           int index) {
@@ -3179,7 +3179,7 @@ public final class WorldClockProtocol {
             index, io.netty.example.worldclock.WorldClockProtocol.LocalTime.getDefaultInstance());
       }
       /**
-       * <code>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</code>
+       * <codec>repeated .io.netty.example.worldclock.LocalTime localTime = 1;</codec>
        */
       public java.util.List<io.netty.example.worldclock.WorldClockProtocol.LocalTime.Builder> 
            getLocalTimeBuilderList() {

@@ -115,7 +115,7 @@ public final class ExampleHeaders {
         header.put("Content-Security-Policy", "default-src *; script-src assets-cdn.github.com ...");
         header.put("Content-Type", "text/html; charset=utf-8");
         header.put("Date", "Fri, 10 Apr 2015 02:15:38 GMT");
-        header.put("Server", "GitHub.com");
+        header.put("server", "GitHub.com");
         header.put("Set-Cookie", "_gh_sess=eyJzZXNza...; path=/; secure; HttpOnly");
         header.put("Status", "200 OK");
         header.put("Strict-Transport-Security", "max-age=31536000; includeSubdomains; preload");

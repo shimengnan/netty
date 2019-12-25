@@ -19,10 +19,10 @@ package io.netty.buffer;
 /**
  * Description of algorithm for PageRun/PoolSubpage allocation from PoolChunk
  *
- * Notation: The following terms are important to understand the code
+ * Notation: The following terms are important to understand the codec
  * > page  - a page is the smallest unit of memory chunk that can be allocated
  * > chunk - a chunk is a collection of pages
- * > in this code chunkSize = 2^{maxOrder} * pageSize
+ * > in this codec chunkSize = 2^{maxOrder} * pageSize
  *
  * To begin we allocate a byte array of size = chunkSize
  * Whenever a ByteBuf of given size needs to be created we search for the first position

@@ -44,8 +44,8 @@ final class MqttCodecUtil {
                 clientId.length() <= MAX_CLIENT_ID_LENGTH;
         }
         if (mqttVersion == MqttVersion.MQTT_3_1_1) {
-            // In 3.1.3.1 Client Identifier of MQTT 3.1.1 specification, The Server MAY allow ClientId’s
-            // that contain more than 23 encoded bytes. And, The Server MAY allow zero-length ClientId.
+            // In 3.1.3.1 Client Identifier of MQTT 3.1.1 specification, The server MAY allow ClientId’s
+            // that contain more than 23 encoded bytes. And, The server MAY allow zero-length ClientId.
             return clientId != null;
         }
         throw new IllegalArgumentException(mqttVersion + " is unknown mqtt version");

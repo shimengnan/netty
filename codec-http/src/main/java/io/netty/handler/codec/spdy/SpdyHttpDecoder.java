@@ -149,7 +149,7 @@ public class SpdyHttpDecoder extends MessageToMessageDecoder<SpdyFrame> {
                 int associatedToStreamId = spdySynStreamFrame.associatedStreamId();
 
                 // If a client receives a SYN_STREAM with an Associated-To-Stream-ID of 0
-                // it must reply with a RST_STREAM with error code INVALID_STREAM.
+                // it must reply with a RST_STREAM with error codec INVALID_STREAM.
                 if (associatedToStreamId == 0) {
                     SpdyRstStreamFrame spdyRstStreamFrame =
                         new DefaultSpdyRstStreamFrame(streamId, SpdyStreamStatus.INVALID_STREAM);
@@ -158,7 +158,7 @@ public class SpdyHttpDecoder extends MessageToMessageDecoder<SpdyFrame> {
                 }
 
                 // If a client receives a SYN_STREAM with isLast set,
-                // reply with a RST_STREAM with error code PROTOCOL_ERROR
+                // reply with a RST_STREAM with error codec PROTOCOL_ERROR
                 // (we only support pushed resources divided into two header blocks).
                 if (spdySynStreamFrame.isLast()) {
                     SpdyRstStreamFrame spdyRstStreamFrame =
@@ -168,7 +168,7 @@ public class SpdyHttpDecoder extends MessageToMessageDecoder<SpdyFrame> {
                 }
 
                 // If a client receives a response with a truncated header block,
-                // reply with a RST_STREAM with error code INTERNAL_ERROR.
+                // reply with a RST_STREAM with error codec INTERNAL_ERROR.
                 if (spdySynStreamFrame.isTruncated()) {
                     SpdyRstStreamFrame spdyRstStreamFrame =
                     new DefaultSpdyRstStreamFrame(streamId, SpdyStreamStatus.INTERNAL_ERROR);
@@ -237,7 +237,7 @@ public class SpdyHttpDecoder extends MessageToMessageDecoder<SpdyFrame> {
             int streamId = spdySynReplyFrame.streamId();
 
             // If a client receives a SYN_REPLY with a truncated header block,
-            // reply with a RST_STREAM frame with error code INTERNAL_ERROR.
+            // reply with a RST_STREAM frame with error codec INTERNAL_ERROR.
             if (spdySynReplyFrame.isTruncated()) {
                 SpdyRstStreamFrame spdyRstStreamFrame =
                         new DefaultSpdyRstStreamFrame(streamId, SpdyStreamStatus.INTERNAL_ERROR);
@@ -278,7 +278,7 @@ public class SpdyHttpDecoder extends MessageToMessageDecoder<SpdyFrame> {
                 if (SpdyCodecUtil.isServerId(streamId)) {
 
                     // If a client receives a HEADERS with a truncated header block,
-                    // reply with a RST_STREAM frame with error code INTERNAL_ERROR.
+                    // reply with a RST_STREAM frame with error codec INTERNAL_ERROR.
                     if (spdyHeadersFrame.isTruncated()) {
                         SpdyRstStreamFrame spdyRstStreamFrame =
                             new DefaultSpdyRstStreamFrame(streamId, SpdyStreamStatus.INTERNAL_ERROR);

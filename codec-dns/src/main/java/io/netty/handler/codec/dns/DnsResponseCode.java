@@ -169,7 +169,7 @@ public class DnsResponseCode implements Comparable<DnsResponseCode> {
 
     public DnsResponseCode(int code, String name) {
         if (code < 0 || code > 65535) {
-            throw new IllegalArgumentException("code: " + code + " (expected: 0 ~ 65535)");
+            throw new IllegalArgumentException("codec: " + code + " (expected: 0 ~ 65535)");
         }
 
         this.code = code;
@@ -177,7 +177,7 @@ public class DnsResponseCode implements Comparable<DnsResponseCode> {
     }
 
     /**
-     * Returns the error code for this {@link DnsResponseCode}.
+     * Returns the error codec for this {@link DnsResponseCode}.
      */
     public int intValue() {
         return code;

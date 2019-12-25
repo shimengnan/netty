@@ -691,13 +691,13 @@ public final class PlatformDependent {
     }
 
     /**
-     * Calculate a hash code of a byte array assuming ASCII character encoding.
-     * The resulting hash code will be case insensitive.
+     * Calculate a hash codec of a byte array assuming ASCII character encoding.
+     * The resulting hash codec will be case insensitive.
      * @param bytes The array which contains the data to hash.
-     * @param startPos What index to start generating a hash code in {@code bytes}
+     * @param startPos What index to start generating a hash codec in {@code bytes}
      * @param length The amount of bytes that should be accounted for in the computation.
-     * @return The hash code of {@code bytes} assuming ASCII character encoding.
-     * The resulting hash code will be case insensitive.
+     * @return The hash codec of {@code bytes} assuming ASCII character encoding.
+     * The resulting hash codec will be case insensitive.
      */
     public static int hashCodeAscii(byte[] bytes, int startPos, int length) {
         return !hasUnsafe() || !unalignedAccess() ?
@@ -706,14 +706,14 @@ public final class PlatformDependent {
     }
 
     /**
-     * Calculate a hash code of a byte array assuming ASCII character encoding.
-     * The resulting hash code will be case insensitive.
+     * Calculate a hash codec of a byte array assuming ASCII character encoding.
+     * The resulting hash codec will be case insensitive.
      * <p>
      * This method assumes that {@code bytes} is equivalent to a {@code byte[]} but just using {@link CharSequence}
      * for storage. The upper most byte of each {@code char} from {@code bytes} is ignored.
      * @param bytes The array which contains the data to hash (assumed to be equivalent to a {@code byte[]}).
-     * @return The hash code of {@code bytes} assuming ASCII character encoding.
-     * The resulting hash code will be case insensitive.
+     * @return The hash codec of {@code bytes} assuming ASCII character encoding.
+     * The resulting hash codec will be case insensitive.
      */
     public static int hashCodeAscii(CharSequence bytes) {
         int hash = HASH_CODE_ASCII_SEED;
@@ -805,7 +805,7 @@ public final class PlatformDependent {
             Object unsafe = null;
             if (hasUnsafe()) {
                 // jctools goes through its own process of initializing unsafe; of
-                // course, this requires permissions which might not be granted to calling code, so we
+                // course, this requires permissions which might not be granted to calling codec, so we
                 // must mark this block as privileged too
                 unsafe = AccessController.doPrivileged(new PrivilegedAction<Object>() {
                     @Override

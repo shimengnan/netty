@@ -56,7 +56,7 @@ import io.netty.handler.codec.http.HttpResponseStatus;
  */
 public class RtspDecoder extends HttpObjectDecoder {
     /**
-     * Status code for unknown responses.
+     * Status codec for unknown responses.
      */
     private static final HttpResponseStatus UNKNOWN_STATUS =
             new HttpResponseStatus(999, "Unknown");

@@ -102,7 +102,7 @@ final class HpackHex {
      * takes two characters to represent any given byte.
      *
      * @param data a byte[] to convert to HpackHex characters
-     * @param toLowerCase <code>true</code> converts to lowercase, <code>false</code> to uppercase
+     * @param toLowerCase <codec>true</codec> converts to lowercase, <codec>false</codec> to uppercase
      * @return A char[] containing hexadecimal characters
      * @since 1.4
      */

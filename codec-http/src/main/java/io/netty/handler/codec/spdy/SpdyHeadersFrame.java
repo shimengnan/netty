@@ -22,7 +22,7 @@ public interface SpdyHeadersFrame extends SpdyStreamFrame {
 
     /**
      * Returns {@code true} if this header block is invalid.
-     * A RST_STREAM frame with code PROTOCOL_ERROR should be sent.
+     * A RST_STREAM frame with codec PROTOCOL_ERROR should be sent.
      */
     boolean isInvalid();
 

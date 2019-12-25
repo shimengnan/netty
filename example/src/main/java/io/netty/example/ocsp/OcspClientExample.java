@@ -211,7 +211,7 @@ public class OcspClientExample {
         protected boolean verify(ChannelHandlerContext ctx, ReferenceCountedOpenSslEngine engine) throws Exception {
             byte[] staple = engine.getOcspResponse();
             if (staple == null) {
-                throw new IllegalStateException("Server didn't provide an OCSP staple!");
+                throw new IllegalStateException("server didn't provide an OCSP staple!");
             }
 
             OCSPResp response = new OCSPResp(staple);

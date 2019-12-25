@@ -54,8 +54,8 @@ public class AsciiStringBenchmark extends AbstractMicrobenchmark {
         int h = 0;
         final int end = asciiString.arrayOffset() + asciiString.length();
         for (int i = asciiString.arrayOffset(); i < end; ++i) {
-            // masking with 0x1F reduces the number of overall bits that impact the hash code but makes the hash
-            // code the same regardless of character case (upper case or lower case hash is the same).
+            // masking with 0x1F reduces the number of overall bits that impact the hash codec but makes the hash
+            // codec the same regardless of character case (upper case or lower case hash is the same).
             h = h * 31 + (asciiString.array()[i] & 0x1F);
         }
         return h;
@@ -70,8 +70,8 @@ public class AsciiStringBenchmark extends AbstractMicrobenchmark {
     public int hashCodeBenchCharSequenceOld() {
         int h = 0;
         for (int i = 0; i < string.length(); ++i) {
-            // masking with 0x1F reduces the number of overall bits that impact the hash code but makes the hash
-            // code the same regardless of character case (upper case or lower case hash is the same).
+            // masking with 0x1F reduces the number of overall bits that impact the hash codec but makes the hash
+            // codec the same regardless of character case (upper case or lower case hash is the same).
             h = h * 31 + (string.charAt(i) & 0x1F);
         }
         return h;

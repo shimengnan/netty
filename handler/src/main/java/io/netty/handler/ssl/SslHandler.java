@@ -114,7 +114,7 @@ import static io.netty.handler.ssl.SslUtils.getEncryptedPacketLength;
  * is composed of three steps:
  * <ol>
  * <li>Client sends a StartTLS request to server.</li>
- * <li>Server sends a StartTLS response to client.</li>
+ * <li>server sends a StartTLS response to client.</li>
  * <li>Client begins SSL handshake.</li>
  * </ol>
  * If you implement a server, you need to:

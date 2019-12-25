@@ -688,7 +688,7 @@ public class SpdyFrameDecoderTest {
         byte flags = 0;
         int length = 8;
         int streamId = RANDOM.nextInt() & 0x7FFFFFFF | 0x01;
-        int statusCode = 0; // invalid status code
+        int statusCode = 0; // invalid status codec
 
         ByteBuf buf = Unpooled.buffer(SPDY_HEADER_SIZE + length);
         encodeControlFrameHeader(buf, type, flags, length);

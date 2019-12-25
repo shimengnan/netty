@@ -29,7 +29,7 @@ import io.netty.util.concurrent.DefaultThreadFactory;
 import java.util.concurrent.ThreadFactory;
 
 /**
- * UDT Message Flow Server
+ * UDT Message Flow server
  * <p>
  * Echoes back any received data from a client.
  */

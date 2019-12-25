@@ -32,7 +32,7 @@ import io.netty.util.internal.UnstableApi;
 @UnstableApi
 public interface Http2GoAwayFrame extends Http2Frame, ByteBufHolder {
     /**
-     * The reason for beginning closure of the connection. Represented as an HTTP/2 error code.
+     * The reason for beginning closure of the connection. Represented as an HTTP/2 error codec.
      */
     long errorCode();
 

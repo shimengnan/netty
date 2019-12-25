@@ -146,7 +146,7 @@ public final class ReferenceCountedOpenSslServerContext extends ReferenceCounted
                 final X509TrustManager manager = chooseTrustManager(trustManagerFactory.getTrustManagers());
 
                 // IMPORTANT: The callbacks set for verification must be static to prevent memory leak as
-                //            otherwise the context can never be collected. This is because the JNI code holds
+                //            otherwise the context can never be collected. This is because the JNI codec holds
                 //            a global reference to the callbacks.
                 //
                 //            See https://github.com/netty/netty/issues/5372
@@ -180,7 +180,7 @@ public final class ReferenceCountedOpenSslServerContext extends ReferenceCounted
             if (PlatformDependent.javaVersion() >= 8) {
                 // Only do on Java8+ as SNIMatcher is not supported in earlier releases.
                 // IMPORTANT: The callbacks set for hostname matching must be static to prevent memory leak as
-                //            otherwise the context can never be collected. This is because the JNI code holds
+                //            otherwise the context can never be collected. This is because the JNI codec holds
                 //            a global reference to the matcher.
                 SSLContext.setSniHostnameMatcher(ctx, new OpenSslSniHostnameMatcher(engineMap));
             }

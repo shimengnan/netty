@@ -19,7 +19,7 @@
   <Match>
     <Class name="~.*Test(\$[^\$]+)*"/>
   </Match>
-  <!-- Generated code -->
+  <!-- Generated codec -->
   <Match>
     <Class name="~.*\.LocalTimeProtocol(\$[^\$]+)*"/>
   </Match>

@@ -139,7 +139,7 @@ public class DefaultHttp2Connection implements Http2Connection {
         }
 
         Iterator<PrimitiveEntry<Http2Stream>> itr = streamMap.entries().iterator();
-        // We must take care while iterating the streamMap as to not modify while iterating in case there are other code
+        // We must take care while iterating the streamMap as to not modify while iterating in case there are other codec
         // paths iterating over the active streams.
         if (activeStreams.allowModifications()) {
             activeStreams.incrementPendingIterations();
@@ -734,7 +734,7 @@ public class DefaultHttp2Connection implements Http2Connection {
                 throw connectionError(PROTOCOL_ERROR, "Stream %d is not open for sending push promise", parent.id());
             }
             if (!opposite().allowPushTo()) {
-                throw connectionError(PROTOCOL_ERROR, "Server push not allowed to opposite endpoint");
+                throw connectionError(PROTOCOL_ERROR, "server push not allowed to opposite endpoint");
             }
             State state = isLocal() ? RESERVED_LOCAL : RESERVED_REMOTE;
             checkNewStreamAllowed(streamId, state);

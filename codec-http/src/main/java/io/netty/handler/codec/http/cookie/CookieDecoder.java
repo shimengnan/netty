@@ -25,7 +25,7 @@ import io.netty.util.internal.logging.InternalLogger;
 import io.netty.util.internal.logging.InternalLoggerFactory;
 
 /**
- * Parent of Client and Server side cookie decoders
+ * Parent of Client and server side cookie decoders
  */
 public abstract class CookieDecoder {
 

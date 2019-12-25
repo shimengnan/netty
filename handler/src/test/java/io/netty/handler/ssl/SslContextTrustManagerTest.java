@@ -70,10 +70,10 @@ public class SslContextTrustManagerTest {
      *            an array of paths to CA Certificates in PEM format to load
      *            from the classpath (relative to this class).
      * @param eecResources
-     *            an array of paths to Server Certificates in PEM format in to
+     *            an array of paths to server Certificates in PEM format in to
      *            load from the classpath (relative to this class).
      * @param expectations
-     *            an array of expecting results for each EEC Server Certificate
+     *            an array of expecting results for each EEC server Certificate
      *            (the array is expected to have the same length the previous
      *            argument, and be arrange in matching order: true means
      *            expected to be valid, false otherwise.

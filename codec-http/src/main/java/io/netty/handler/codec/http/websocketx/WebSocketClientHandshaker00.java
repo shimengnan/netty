@@ -38,7 +38,7 @@ import java.nio.ByteBuffer;
  * 00</a>
  * </p>
  * <p>
- * A very large portion of this code was taken from the Netty 3.2 HTTP example.
+ * A very large portion of this codec was taken from the Netty 3.2 HTTP example.
  * </p>
  */
 public class WebSocketClientHandshaker00 extends WebSocketClientHandshaker {

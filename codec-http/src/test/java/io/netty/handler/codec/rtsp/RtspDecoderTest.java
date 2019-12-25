@@ -43,12 +43,12 @@ public class RtspDecoderTest {
                       + "42b4-8d6b-379f492fcf0f RTSP/1.0\r\n"
                       + "CSeq: 2\r\n"
                       + "Session: 2777476816092819869\r\n"
-                      + "x-notice: 5402 \"Session Terminated by Server\" "
+                      + "x-notice: 5402 \"Session Terminated by server\" "
                       + "event-date=20150514T075303Z\r\n"
                       + "Range: npt=0\r\n\r\n").getBytes();
 
         byte[] data2 = ("RTSP/1.0 200 OK\r\n" +
-                        "Server: Orbit2x\r\n" +
+                        "server: Orbit2x\r\n" +
                         "CSeq: 172\r\n" +
                         "Session: 2547019973447939919\r\n" +
                         "\r\n").getBytes();

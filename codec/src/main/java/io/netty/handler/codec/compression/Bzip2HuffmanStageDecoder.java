@@ -32,24 +32,24 @@ final class Bzip2HuffmanStageDecoder {
     byte[] selectors;
 
     /**
-     * The minimum code length for each Huffman table.
+     * The minimum codec length for each Huffman table.
      */
     private final int[] minimumLengths;
 
     /**
      * An array of values for each Huffman table that must be subtracted from the numerical value of
-     * a Huffman code of a given bit length to give its canonical code index.
+     * a Huffman codec of a given bit length to give its canonical codec index.
      */
     private final int[][] codeBases;
 
     /**
      * An array of values for each Huffman table that gives the highest numerical value of a Huffman
-     * code of a given bit length.
+     * codec of a given bit length.
      */
     private final int[][] codeLimits;
 
     /**
-     * A mapping for each Huffman table from canonical code index to output symbol.
+     * A mapping for each Huffman table from canonical codec index to output symbol.
      */
     private final int[][] codeSymbols;
 
@@ -87,7 +87,7 @@ final class Bzip2HuffmanStageDecoder {
     int currentSelector;
 
     /**
-     * The Canonical Huffman code lengths for each table.
+     * The Canonical Huffman codec lengths for each table.
      */
     final byte[][] tableCodeLengths;
 
@@ -110,7 +110,7 @@ final class Bzip2HuffmanStageDecoder {
     }
 
     /**
-     * Constructs Huffman decoding tables from lists of Canonical Huffman code lengths.
+     * Constructs Huffman decoding tables from lists of Canonical Huffman codec lengths.
      */
     void createHuffmanDecodingTables() {
         final int alphabetSize = this.alphabetSize;
@@ -124,7 +124,7 @@ final class Bzip2HuffmanStageDecoder {
             int minimumLength = HUFFMAN_DECODE_MAX_CODE_LENGTH;
             int maximumLength = 0;
 
-            // Find the minimum and maximum code length for the table
+            // Find the minimum and maximum codec length for the table
             for (int i = 0; i < alphabetSize; i++) {
                 final byte currLength = codeLengths[i];
                 maximumLength = Math.max(currLength, maximumLength);
@@ -132,7 +132,7 @@ final class Bzip2HuffmanStageDecoder {
             }
             minimumLengths[table] = minimumLength;
 
-            // Calculate the first output symbol for each code length
+            // Calculate the first output symbol for each codec length
             for (int i = 0; i < alphabetSize; i++) {
                 tableBases[codeLengths[i] + 1]++;
             }
@@ -141,7 +141,7 @@ final class Bzip2HuffmanStageDecoder {
                 tableBases[i] = b;
             }
 
-            // Calculate the first and last Huffman code for each code length (codes at a given
+            // Calculate the first and last Huffman codec for each codec length (codes at a given
             // length are sequential in value)
             for (int i = minimumLength, code = 0; i <= maximumLength; i++) {
                 int base = code;
@@ -151,7 +151,7 @@ final class Bzip2HuffmanStageDecoder {
                 code <<= 1;
             }
 
-            // Populate the mapping from canonical code index to output symbol
+            // Populate the mapping from canonical codec index to output symbol
             for (int bitLength = minimumLength, codeIndex = 0; bitLength <= maximumLength; bitLength++) {
                 for (int symbol = 0; symbol < alphabetSize; symbol++) {
                     if (codeLengths[symbol] == bitLength) {
@@ -186,16 +186,16 @@ final class Bzip2HuffmanStageDecoder {
         int codeLength = minimumLengths[currentTable];
 
         // Starting with the minimum bit length for the table, read additional bits one at a time
-        // until a complete code is recognised
+        // until a complete codec is recognised
         int codeBits = reader.readBits(codeLength);
         for (; codeLength <= HUFFMAN_DECODE_MAX_CODE_LENGTH; codeLength++) {
             if (codeBits <= tableLimits[codeLength]) {
-                // Convert the code to a symbol index and return
+                // Convert the codec to a symbol index and return
                 return tableSymbols[codeBits - tableBases[codeLength]];
             }
             codeBits = codeBits << 1 | reader.readBits(1);
         }
 
-        throw new DecompressionException("a valid code was not recognised");
+        throw new DecompressionException("a valid codec was not recognised");
     }
 }

@@ -16,7 +16,7 @@
 package io.netty.handler.codec.compression;
 
 /**
- * An in-place, length restricted Canonical Huffman code length allocator.<br>
+ * An in-place, length restricted Canonical Huffman codec length allocator.<br>
  * Based on the algorithm proposed by R. L. Milidi'u, A. A. Pessoa and E. S. Laber in
  * <a href="http://www-di.inf.puc-rio.br/~laber/public/spire98.ps">In-place Length-Restricted Prefix Coding</a>
  * and incorporating additional ideas from the implementation of
@@ -24,7 +24,7 @@ package io.netty.handler.codec.compression;
  */
 final class Bzip2HuffmanAllocator {
     /**
-     * @param array The code length array
+     * @param array The codec length array
      * @param i The input position
      * @param nodesToMove The number of internal nodes to be relocated
      * @return The smallest {@code k} such that {@code nodesToMove <= k <= i} and
@@ -53,8 +53,8 @@ final class Bzip2HuffmanAllocator {
     }
 
     /**
-     * Fills the code array with extended parent pointers.
-     * @param array The code length array
+     * Fills the codec array with extended parent pointers.
+     * @param array The codec length array
      */
     private static void setExtendedParentPointers(final int[] array) {
         final int length = array.length;
@@ -80,8 +80,8 @@ final class Bzip2HuffmanAllocator {
     }
 
     /**
-     * Finds the number of nodes to relocate in order to achieve a given code length limit.
-     * @param array The code length array
+     * Finds the number of nodes to relocate in order to achieve a given codec length limit.
+     * @param array The codec length array
      * @param maximumLength The maximum bit length for the generated codes
      * @return The number of nodes to relocate
      */
@@ -94,8 +94,8 @@ final class Bzip2HuffmanAllocator {
     }
 
     /**
-     * A final allocation pass with no code length limit.
-     * @param array The code length array
+     * A final allocation pass with no codec length limit.
+     * @param array The codec length array
      */
     private static void allocateNodeLengths(final int[] array) {
         int firstNode = array.length - 2;
@@ -114,8 +114,8 @@ final class Bzip2HuffmanAllocator {
     }
 
     /**
-     * A final allocation pass that relocates nodes in order to achieve a maximum code length limit.
-     * @param array The code length array
+     * A final allocation pass that relocates nodes in order to achieve a maximum codec length limit.
+     * @param array The codec length array
      * @param nodesToMove The number of internal nodes to be relocated
      * @param insertDepth The depth at which to insert relocated nodes
      */
@@ -150,10 +150,10 @@ final class Bzip2HuffmanAllocator {
     }
 
     /**
-     * Allocates Canonical Huffman code lengths in place based on a sorted frequency array.
+     * Allocates Canonical Huffman codec lengths in place based on a sorted frequency array.
      * @param array On input, a sorted array of symbol frequencies; On output, an array of Canonical
-     *              Huffman code lengths
-     * @param maximumLength The maximum code length. Must be at least {@code ceil(log2(array.length))}
+     *              Huffman codec lengths
+     * @param maximumLength The maximum codec length. Must be at least {@code ceil(log2(array.length))}
      */
     static void allocateHuffmanCodeLengths(final int[] array, final int maximumLength) {
         switch (array.length) {
@@ -167,10 +167,10 @@ final class Bzip2HuffmanAllocator {
         /* Pass 1 : Set extended parent pointers */
         setExtendedParentPointers(array);
 
-        /* Pass 2 : Find number of nodes to relocate in order to achieve maximum code length */
+        /* Pass 2 : Find number of nodes to relocate in order to achieve maximum codec length */
         int nodesToRelocate = findNodesToRelocate(array, maximumLength);
 
-        /* Pass 3 : Generate code lengths */
+        /* Pass 3 : Generate codec lengths */
         if (array[0] % array.length >= nodesToRelocate) {
             allocateNodeLengths(array);
         } else {

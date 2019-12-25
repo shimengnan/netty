@@ -260,7 +260,7 @@ public class TrafficShapingHandlerTest extends AbstractSocketTest {
      * @param additionalExecutor
      *            shall the pipeline add the handler using an additional executor
      * @param limitRead
-     *            True to set Read Limit on Server side
+     *            True to set Read Limit on server side
      * @param limitWrite
      *            True to set Write Limit on Client side
      * @param globalLimit

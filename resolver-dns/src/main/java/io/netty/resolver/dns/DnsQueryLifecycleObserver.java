@@ -76,9 +76,9 @@ public interface DnsQueryLifecycleObserver {
     DnsQueryLifecycleObserver queryCNAMEd(DnsQuestion cnameQuestion);
 
     /**
-     * The response to the query didn't provide the expected response code, but it didn't return
+     * The response to the query didn't provide the expected response codec, but it didn't return
      * {@link DnsResponseCode#NXDOMAIN} so we may try to query again.
-     * @param code the unexpected response code.
+     * @param code the unexpected response codec.
      * @return An observer for the new query which we may issue.
      */
     DnsQueryLifecycleObserver queryNoAnswer(DnsResponseCode code);
@@ -87,8 +87,8 @@ public interface DnsQueryLifecycleObserver {
      * The following criteria are possible:
      * <ul>
      *     <li>IO Error</li>
-     *     <li>Server responded with an invalid DNS response</li>
-     *     <li>Server responded with a valid DNS response, but it didn't progress the resolution</li>
+     *     <li>server responded with an invalid DNS response</li>
+     *     <li>server responded with a valid DNS response, but it didn't progress the resolution</li>
      * </ul>
      * @param cause The cause which for the failure.
      */

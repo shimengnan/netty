@@ -64,7 +64,7 @@ public class HttpInvalidMessageTest {
     @Test
     public void testResponseWithBadInitialLine() throws Exception {
         EmbeddedChannel ch = new EmbeddedChannel(new HttpResponseDecoder());
-        ch.writeInbound(Unpooled.copiedBuffer("HTTP/1.0 BAD_CODE Bad Server\r\n", CharsetUtil.UTF_8));
+        ch.writeInbound(Unpooled.copiedBuffer("HTTP/1.0 BAD_CODE Bad server\r\n", CharsetUtil.UTF_8));
         HttpResponse res = ch.readInbound();
         DecoderResult dr = res.decoderResult();
         assertFalse(dr.isSuccess());

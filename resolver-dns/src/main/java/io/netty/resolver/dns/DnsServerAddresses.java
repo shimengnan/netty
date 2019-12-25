@@ -50,7 +50,7 @@ public abstract class DnsServerAddresses {
      * retrieve the list of the system DNS server addresses from the environment, it will use {@code "8.8.8.8"} and
      * {@code "8.8.4.4"}, the addresses of the Google public DNS servers.
      * <p>
-     * This method has the same effect with the following code:
+     * This method has the same effect with the following codec:
      * <pre>
      * DnsServerAddresses.sequential(DnsServerAddresses.defaultAddressList());
      * </pre>

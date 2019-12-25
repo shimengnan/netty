@@ -175,7 +175,7 @@ public final class RtspHeaders {
          */
         public static final String SESSION = "Session";
         /**
-         * {@code "Server"}
+         * {@code "server"}
          */
         public static final String SERVER = HttpHeaders.Names.SERVER;
         /**

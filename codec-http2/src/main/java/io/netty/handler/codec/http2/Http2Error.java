@@ -53,7 +53,7 @@ public enum Http2Error {
     }
 
     /**
-     * Gets the code for this error used on the wire.
+     * Gets the codec for this error used on the wire.
      */
     public long code() {
         return code;

@@ -16,7 +16,7 @@
 package io.netty.handler.codec.spdy;
 
 /**
- * The SPDY session status code and its description.
+ * The SPDY session status codec and its description.
  */
 public class SpdySessionStatus implements Comparable<SpdySessionStatus> {
 
@@ -39,8 +39,8 @@ public class SpdySessionStatus implements Comparable<SpdySessionStatus> {
         new SpdySessionStatus(2, "INTERNAL_ERROR");
 
     /**
-     * Returns the {@link SpdySessionStatus} represented by the specified code.
-     * If the specified code is a defined SPDY status code, a cached instance
+     * Returns the {@link SpdySessionStatus} represented by the specified codec.
+     * If the specified codec is a defined SPDY status codec, a cached instance
      * will be returned.  Otherwise, a new instance will be returned.
      */
     public static SpdySessionStatus valueOf(int code) {
@@ -61,7 +61,7 @@ public class SpdySessionStatus implements Comparable<SpdySessionStatus> {
     private final String statusPhrase;
 
     /**
-     * Creates a new instance with the specified {@code code} and its
+     * Creates a new instance with the specified {@code codec} and its
      * {@code statusPhrase}.
      */
     public SpdySessionStatus(int code, String statusPhrase) {
@@ -74,7 +74,7 @@ public class SpdySessionStatus implements Comparable<SpdySessionStatus> {
     }
 
     /**
-     * Returns the code of this status.
+     * Returns the codec of this status.
      */
     public int code() {
         return code;

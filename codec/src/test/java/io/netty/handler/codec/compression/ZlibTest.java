@@ -53,12 +53,12 @@ public abstract class ZlibTest {
             " Congratulations!</p>\n" +
             " \n" +
             "<p>This is the default Tomcat home page." +
-            " It can be found on the local filesystem at: <code>/var/lib/tomcat7/webapps/ROOT/index.html</code></p>\n" +
+            " It can be found on the local filesystem at: <codec>/var/lib/tomcat7/webapps/ROOT/index.html</codec></p>\n" +
             '\n' +
             "<p>Tomcat7 veterans might be pleased to learn that this system instance of Tomcat is installed with" +
-            " <code>CATALINA_HOME</code> in <code>/usr/share/tomcat7</code> and <code>CATALINA_BASE</code> in" +
-            " <code>/var/lib/tomcat7</code>, following the rules from" +
-            " <code>/usr/share/doc/tomcat7-common/RUNNING.txt.gz</code>.</p>\n" +
+            " <codec>CATALINA_HOME</codec> in <codec>/usr/share/tomcat7</codec> and <codec>CATALINA_BASE</codec> in" +
+            " <codec>/var/lib/tomcat7</codec>, following the rules from" +
+            " <codec>/usr/share/doc/tomcat7-common/RUNNING.txt.gz</codec>.</p>\n" +
             '\n' +
             "<p>You might consider installing the following packages, if you haven't already done so:</p>\n" +
             '\n' +
@@ -76,7 +76,7 @@ public abstract class ZlibTest {
             "</p><p>NOTE: For security reasons, using the manager webapp is restricted" +
             " to users with role \"manager\"." +
             " The host-manager webapp is restricted to users with role \"admin\". Users are " +
-            "defined in <code>/etc/tomcat7/tomcat-users.xml</code>.</p>\n" +
+            "defined in <codec>/etc/tomcat7/tomcat-users.xml</codec>.</p>\n" +
             '\n' +
             '\n' +
             '\n' +

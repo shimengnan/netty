@@ -61,7 +61,7 @@ public final class JdkAlpnApplicationProtocolNegotiator extends JdkBaseApplicati
     /**
      * Create a new instance.
      * @param clientFailIfNoCommonProtocols Client side fail with a fatal alert if not common protocols are detected.
-     * @param serverFailIfNoCommonProtocols Server side fail with a fatal alert if not common protocols are detected.
+     * @param serverFailIfNoCommonProtocols server side fail with a fatal alert if not common protocols are detected.
      * @param protocols The order of iteration determines the preference of support for protocols.
      */
     public JdkAlpnApplicationProtocolNegotiator(boolean clientFailIfNoCommonProtocols,
@@ -74,7 +74,7 @@ public final class JdkAlpnApplicationProtocolNegotiator extends JdkBaseApplicati
     /**
      * Create a new instance.
      * @param clientFailIfNoCommonProtocols Client side fail with a fatal alert if not common protocols are detected.
-     * @param serverFailIfNoCommonProtocols Server side fail with a fatal alert if not common protocols are detected.
+     * @param serverFailIfNoCommonProtocols server side fail with a fatal alert if not common protocols are detected.
      * @param protocols The order of iteration determines the preference of support for protocols.
      */
     public JdkAlpnApplicationProtocolNegotiator(boolean clientFailIfNoCommonProtocols,

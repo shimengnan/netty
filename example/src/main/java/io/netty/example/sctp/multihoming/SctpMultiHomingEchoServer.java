@@ -33,7 +33,7 @@ import java.net.InetAddress;
 import java.net.InetSocketAddress;
 
 /**
- * SCTP Echo Server with multi-homing support.
+ * SCTP Echo server with multi-homing support.
  */
 public final class SctpMultiHomingEchoServer {
 

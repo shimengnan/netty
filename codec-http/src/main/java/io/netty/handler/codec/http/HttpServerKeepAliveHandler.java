@@ -76,7 +76,7 @@ public class HttpServerKeepAliveHandler extends ChannelDuplexHandler {
                 pendingResponses = 0;
                 persistentConnection = false;
             }
-            // Server might think it can keep connection alive, but we should fix response header if we know better
+            // server might think it can keep connection alive, but we should fix response header if we know better
             if (!shouldKeepAlive()) {
                 setKeepAlive(response, false);
             }

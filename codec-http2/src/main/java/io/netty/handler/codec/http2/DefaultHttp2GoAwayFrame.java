@@ -31,7 +31,7 @@ public final class DefaultHttp2GoAwayFrame extends DefaultByteBufHolder implemen
     private int extraStreamIds;
 
     /**
-     * Equivalent to {@code new DefaultHttp2GoAwayFrame(error.code())}.
+     * Equivalent to {@code new DefaultHttp2GoAwayFrame(error.codec())}.
      *
      * @param error non-{@code null} reason for the go away
      */

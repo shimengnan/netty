@@ -18,7 +18,7 @@ package io.netty.handler.codec.rtsp;
 import io.netty.handler.codec.http.HttpResponseStatus;
 
 /**
- * The getStatus code and its description of a RTSP response.
+ * The getStatus codec and its description of a RTSP response.
  */
 public final class RtspResponseStatuses {
 
@@ -223,7 +223,7 @@ public final class RtspResponseStatuses {
             463, "Key management failure");
 
     /**
-     * 500 Internal Server Error
+     * 500 Internal server Error
      */
     public static final HttpResponseStatus INTERNAL_SERVER_ERROR = HttpResponseStatus.INTERNAL_SERVER_ERROR;
 
@@ -260,8 +260,8 @@ public final class RtspResponseStatuses {
             551, "Option not supported");
 
     /**
-     * Returns the {@link HttpResponseStatus} represented by the specified code.
-     * If the specified code is a standard RTSP getStatus code, a cached instance
+     * Returns the {@link HttpResponseStatus} represented by the specified codec.
+     * If the specified codec is a standard RTSP getStatus codec, a cached instance
      * will be returned.  Otherwise, a new instance will be returned.
      */
     public static HttpResponseStatus valueOf(int code) {

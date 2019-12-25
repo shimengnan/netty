@@ -30,14 +30,14 @@ public final class DefaultSmtpResponse implements SmtpResponse {
     private final List<CharSequence> details;
 
     /**
-     * Creates a new instance with the given smtp code and no details.
+     * Creates a new instance with the given smtp codec and no details.
      */
     public DefaultSmtpResponse(int code) {
         this(code, (List<CharSequence>) null);
     }
 
     /**
-     * Creates a new instance with the given smtp code and details.
+     * Creates a new instance with the given smtp codec and details.
      */
     public DefaultSmtpResponse(int code, CharSequence... details) {
         this(code, SmtpUtils.toUnmodifiableList(details));
@@ -45,7 +45,7 @@ public final class DefaultSmtpResponse implements SmtpResponse {
 
     DefaultSmtpResponse(int code, List<CharSequence> details) {
         if (code < 100 || code > 599) {
-            throw new IllegalArgumentException("code must be 100 <= code <= 599");
+            throw new IllegalArgumentException("codec must be 100 <= codec <= 599");
         }
         this.code = code;
         if (details == null) {
@@ -89,7 +89,7 @@ public final class DefaultSmtpResponse implements SmtpResponse {
     @Override
     public String toString() {
         return "DefaultSmtpResponse{" +
-                "code=" + code +
+                "codec=" + code +
                 ", details=" + details +
                 '}';
     }

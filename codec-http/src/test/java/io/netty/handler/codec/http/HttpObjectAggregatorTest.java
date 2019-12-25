@@ -269,7 +269,7 @@ public class HttpObjectAggregatorTest {
     @Test
     public void testBadResponse() throws Exception {
         EmbeddedChannel ch = new EmbeddedChannel(new HttpResponseDecoder(), new HttpObjectAggregator(1024 * 1024));
-        ch.writeInbound(Unpooled.copiedBuffer("HTTP/1.0 BAD_CODE Bad Server\r\n", CharsetUtil.UTF_8));
+        ch.writeInbound(Unpooled.copiedBuffer("HTTP/1.0 BAD_CODE Bad server\r\n", CharsetUtil.UTF_8));
         Object inbound = ch.readInbound();
         assertThat(inbound, is(instanceOf(FullHttpResponse.class)));
         assertTrue(((DecoderResultProvider) inbound).decoderResult().isFailure());

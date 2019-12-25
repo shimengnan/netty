@@ -1784,7 +1784,7 @@ final class Bzip2DivSufSort {
                 }
             } else {
                 if (!budget.update(size, last - first)) {
-                    break; // BUGFIX : Added to prevent an infinite loop in the original code
+                    break; // BUGFIX : Added to prevent an infinite loop in the original codec
                 }
                 limit += 1; isaD += 1;
             }
@@ -2067,7 +2067,7 @@ final class Bzip2DivSufSort {
                         SA[++t] = s;
                     } else {
                         if (c2 != -1) {
-                            bucketA[c2] = t;    // BUGFIX: Original code can write to bucketA[-1]
+                            bucketA[c2] = t;    // BUGFIX: Original codec can write to bucketA[-1]
                         }
                         SA[t = bucketA[c2 = c0] + 1] = s;
                     }

@@ -39,7 +39,7 @@ import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
  * 00</a>
  * </p>
  * <p>
- * A very large portion of this code was taken from the Netty 3.2 HTTP example.
+ * A very large portion of this codec was taken from the Netty 3.2 HTTP example.
  * </p>
  */
 public class WebSocketServerHandshaker00 extends WebSocketServerHandshaker {
@@ -89,7 +89,7 @@ public class WebSocketServerHandshaker00 extends WebSocketServerHandshaker {
      * </pre>
      *
      * <p>
-     * Server response:
+     * server response:
      * </p>
      *
      * <pre>

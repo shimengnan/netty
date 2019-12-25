@@ -20,7 +20,7 @@ import io.netty.internal.tcnative.CertificateVerifier;
 import java.security.cert.CertificateException;
 
 /**
- * A special {@link CertificateException} which allows to specify which error code is included in the
+ * A special {@link CertificateException} which allows to specify which error codec is included in the
  * SSL Record. This only work when {@link SslProvider#OPENSSL} or {@link SslProvider#OPENSSL_REFCNT} is used.
  */
 public final class OpenSslCertificateException extends CertificateException {
@@ -30,7 +30,7 @@ public final class OpenSslCertificateException extends CertificateException {
 
     /**
      * Construct a new exception with the
-     * <a href="https://www.openssl.org/docs/manmaster/apps/verify.html">error code</a>.
+     * <a href="https://www.openssl.org/docs/manmaster/apps/verify.html">error codec</a>.
      */
     public OpenSslCertificateException(int errorCode) {
         this((String) null, errorCode);
@@ -38,7 +38,7 @@ public final class OpenSslCertificateException extends CertificateException {
 
     /**
      * Construct a new exception with the msg and
-     * <a href="https://www.openssl.org/docs/manmaster/apps/verify.html">error code</a> .
+     * <a href="https://www.openssl.org/docs/manmaster/apps/verify.html">error codec</a> .
      */
     public OpenSslCertificateException(String msg, int errorCode) {
         super(msg);
@@ -47,7 +47,7 @@ public final class OpenSslCertificateException extends CertificateException {
 
     /**
      * Construct a new exception with the msg, cause and
-     * <a href="https://www.openssl.org/docs/manmaster/apps/verify.html">error code</a> .
+     * <a href="https://www.openssl.org/docs/manmaster/apps/verify.html">error codec</a> .
      */
     public OpenSslCertificateException(String message, Throwable cause, int errorCode) {
         super(message, cause);
@@ -56,14 +56,14 @@ public final class OpenSslCertificateException extends CertificateException {
 
     /**
      * Construct a new exception with the cause and
-     * <a href="https://www.openssl.org/docs/manmaster/apps/verify.html">error code</a> .
+     * <a href="https://www.openssl.org/docs/manmaster/apps/verify.html">error codec</a> .
      */
     public OpenSslCertificateException(Throwable cause, int errorCode) {
         this(null, cause, errorCode);
     }
 
     /**
-     * Return the <a href="https://www.openssl.org/docs/man1.0.2/apps/verify.html">error code</a> to use.
+     * Return the <a href="https://www.openssl.org/docs/man1.0.2/apps/verify.html">error codec</a> to use.
      */
     public int errorCode() {
         return errorCode;

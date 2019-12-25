@@ -37,7 +37,7 @@ import java.util.Enumeration;
 /**
  * Provides socket operations with privileges enabled. This is necessary for applications that use the
  * {@link SecurityManager} to restrict {@link SocketPermission} to their application. By asserting that these
- * operations are privileged, the operations can proceed even if some code in the calling chain lacks the appropriate
+ * operations are privileged, the operations can proceed even if some codec in the calling chain lacks the appropriate
  * {@link SocketPermission}.
  */
 public final class SocketUtils {

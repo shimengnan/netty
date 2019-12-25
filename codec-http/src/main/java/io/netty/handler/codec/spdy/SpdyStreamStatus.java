@@ -16,7 +16,7 @@
 package io.netty.handler.codec.spdy;
 
 /**
- * The SPDY stream status code and its description.
+ * The SPDY stream status codec and its description.
  */
 public class SpdyStreamStatus implements Comparable<SpdyStreamStatus> {
 
@@ -87,14 +87,14 @@ public class SpdyStreamStatus implements Comparable<SpdyStreamStatus> {
         new SpdyStreamStatus(11, "FRAME_TOO_LARGE");
 
     /**
-     * Returns the {@link SpdyStreamStatus} represented by the specified code.
-     * If the specified code is a defined SPDY status code, a cached instance
+     * Returns the {@link SpdyStreamStatus} represented by the specified codec.
+     * If the specified codec is a defined SPDY status codec, a cached instance
      * will be returned.  Otherwise, a new instance will be returned.
      */
     public static SpdyStreamStatus valueOf(int code) {
         if (code == 0) {
             throw new IllegalArgumentException(
-                    "0 is not a valid status code for a RST_STREAM");
+                    "0 is not a valid status codec for a RST_STREAM");
         }
 
         switch (code) {
@@ -130,13 +130,13 @@ public class SpdyStreamStatus implements Comparable<SpdyStreamStatus> {
     private final String statusPhrase;
 
     /**
-     * Creates a new instance with the specified {@code code} and its
+     * Creates a new instance with the specified {@code codec} and its
      * {@code statusPhrase}.
      */
     public SpdyStreamStatus(int code, String statusPhrase) {
         if (code == 0) {
             throw new IllegalArgumentException(
-                    "0 is not a valid status code for a RST_STREAM");
+                    "0 is not a valid status codec for a RST_STREAM");
         }
 
         if (statusPhrase == null) {
@@ -148,7 +148,7 @@ public class SpdyStreamStatus implements Comparable<SpdyStreamStatus> {
     }
 
     /**
-     * Returns the code of this status.
+     * Returns the codec of this status.
      */
     public int code() {
         return code;

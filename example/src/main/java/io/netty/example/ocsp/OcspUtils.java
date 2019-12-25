@@ -139,7 +139,7 @@ public final class OcspUtils {
                 try {
                     int code = connection.getResponseCode();
                     if (code != HttpsURLConnection.HTTP_OK) {
-                        throw new IOException("Unexpected status-code=" + code);
+                        throw new IOException("Unexpected status-codec=" + code);
                     }
 
                     String contentType = connection.getContentType();

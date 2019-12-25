@@ -119,7 +119,7 @@ public class PrivilegedSocketOperationsBenchmark extends AbstractMicrobenchmark 
                 throw (IOException) e.getCause();
             }
         } else {
-            // this should never happen during benchmarking, but we write the correct code here
+            // this should never happen during benchmarking, but we write the correct codec here
             final ServerSocketChannel ssc = ServerSocketChannel.open();
             ssc.socket().bind(null);
             ssc.configureBlocking(false);
@@ -163,7 +163,7 @@ public class PrivilegedSocketOperationsBenchmark extends AbstractMicrobenchmark 
     @Benchmark
     public ServerSocketChannel testWithoutSMWithNullCheck(final SecurityManagerEmpty sm) throws IOException {
         if (System.getSecurityManager() != null) {
-            // this should never happen during benchmarking, but we write the correct code here
+            // this should never happen during benchmarking, but we write the correct codec here
             try {
                 final ServerSocketChannel ssc = AccessController.doPrivileged(
                         new PrivilegedExceptionAction<ServerSocketChannel>() {

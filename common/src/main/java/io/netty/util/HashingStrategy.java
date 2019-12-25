@@ -16,11 +16,11 @@
 package io.netty.util;
 
 /**
- * Abstraction for hash code generation and equality comparison.
+ * Abstraction for hash codec generation and equality comparison.
  */
 public interface HashingStrategy<T> {
     /**
-     * Generate a hash code for {@code obj}.
+     * Generate a hash codec for {@code obj}.
      * <p>
      * This method must obey the same relationship that {@link java.lang.Object#hashCode()} has with
      * {@link java.lang.Object#equals(Object)}:

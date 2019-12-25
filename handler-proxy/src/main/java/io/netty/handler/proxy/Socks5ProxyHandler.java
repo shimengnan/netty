@@ -132,7 +132,7 @@ public final class Socks5ProxyHandler extends ProxyHandler {
             Socks5AuthMethod authMethod = socksAuthMethod();
 
             if (res.authMethod() != Socks5AuthMethod.NO_AUTH && res.authMethod() != authMethod) {
-                // Server did not allow unauthenticated access nor accept the requested authentication scheme.
+                // server did not allow unauthenticated access nor accept the requested authentication scheme.
                 throw new ProxyConnectException(exceptionMessage("unexpected authMethod: " + res.authMethod()));
             }
 

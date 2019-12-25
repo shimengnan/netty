@@ -90,7 +90,7 @@ public final class HttpConversionUtil {
     public static final String OUT_OF_MESSAGE_SEQUENCE_PATH = "";
 
     /**
-     * This will be the status code used for {@link HttpResponse} objects generated out of the HTTP message flow defined
+     * This will be the status codec used for {@link HttpResponse} objects generated out of the HTTP message flow defined
      * in <a href="http://tools.ietf.org/html/draft-ietf-httpbis-http2-16#section-8.1.">HTTP/2 Spec Message Flow</a>
      */
     public static final HttpResponseStatus OUT_OF_MESSAGE_SEQUENCE_RETURN_CODE = HttpResponseStatus.OK;
@@ -163,7 +163,7 @@ public final class HttpConversionUtil {
     }
 
     /**
-     * Apply HTTP/2 rules while translating status code to {@link HttpResponseStatus}
+     * Apply HTTP/2 rules while translating status codec to {@link HttpResponseStatus}
      *
      * @param status The status from an HTTP/2 frame
      * @return The HTTP/1.x status
@@ -174,13 +174,13 @@ public final class HttpConversionUtil {
         try {
             result = HttpResponseStatus.parseLine(status);
             if (result == HttpResponseStatus.SWITCHING_PROTOCOLS) {
-                throw connectionError(PROTOCOL_ERROR, "Invalid HTTP/2 status code '%d'", result.code());
+                throw connectionError(PROTOCOL_ERROR, "Invalid HTTP/2 status codec '%d'", result.code());
             }
         } catch (Http2Exception e) {
             throw e;
         } catch (Throwable t) {
             throw connectionError(PROTOCOL_ERROR, t,
-                            "Unrecognized HTTP status code '%s' encountered in translation to HTTP/1.x", status);
+                            "Unrecognized HTTP status codec '%s' encountered in translation to HTTP/1.x", status);
         }
         return result;
     }
@@ -425,7 +425,7 @@ public final class HttpConversionUtil {
     }
 
     /**
-     * Generate a HTTP/2 {code :path} from a URI in accordance with
+     * Generate a HTTP/2 {codec :path} from a URI in accordance with
      * <a href="https://tools.ietf.org/html/rfc7230#section-5.3">rfc7230, 5.3</a>.
      */
     private static AsciiString toHttp2Path(URI uri) {

@@ -23,7 +23,7 @@ package io.netty.channel.pool;
  */
 public interface ChannelPoolMap<K, P extends ChannelPool> {
     /**
-     * Return the {@link ChannelPool} for the {@code code}. This will never return {@code null},
+     * Return the {@link ChannelPool} for the {@code codec}. This will never return {@code null},
      * but create a new {@link ChannelPool} if non exists for they requested {@code key}.
      *
      * Please note that {@code null} keys are not allowed.

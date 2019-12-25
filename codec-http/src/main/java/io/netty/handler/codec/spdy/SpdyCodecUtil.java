@@ -278,7 +278,7 @@ final class SpdyCodecUtil {
      * Returns {@code true} if ID is for a server initiated stream or ping.
      */
     static boolean isServerId(int id) {
-        // Server initiated streams and pings have even IDs
+        // server initiated streams and pings have even IDs
         return id % 2 == 0;
     }
 
